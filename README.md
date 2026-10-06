@@ -1,0 +1,2 @@
+# SADAL-DBS-06.10.2026
+Sadal DBS Pakedi 06.10.2026
