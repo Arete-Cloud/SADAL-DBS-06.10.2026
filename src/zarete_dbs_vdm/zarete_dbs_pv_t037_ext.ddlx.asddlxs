@@ -1,0 +1,14 @@
+@Metadata.layer: #CORE
+@UI: {
+  headerInfo: {
+    typeName: 'Cariler',
+    typeNamePlural: 'Cariler'
+  }
+}
+annotate entity ZARETE_DBS_DD_T037 with
+{
+  @UI.lineItem: [ { position: 10, importance: #MEDIUM, label: 'Müşteri' } ]
+  @EndUserText.label: 'Müşteri'
+  Customer;
+
+}

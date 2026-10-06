@@ -1,0 +1,19 @@
+{
+  "formatVersion": "1",
+  "header": {
+    "description": "DBS Belge ve Fatura Sorgulama Job Template",
+    "originalLanguage": "tr",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "catalogName": "ZARETE_DBS_JOB_CATALOG_002"
+  },
+  "parameters": {
+    "singleValueParameters": [
+      {
+        "name": "P_ESKI",
+        "value": "X"
+      }
+    ]
+  }
+}

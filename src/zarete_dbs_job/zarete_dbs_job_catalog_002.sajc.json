@@ -1,0 +1,16 @@
+{
+  "formatVersion": "1",
+  "header": {
+    "description": "DBS Belge ve Fatura Sorgusu JC",
+    "originalLanguage": "tr",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "className": "ZARETE_DBS_CL_FATURA_JOB"
+  },
+  "parameters": [
+    {
+      "name": "P_ESKI"
+    }
+  ]
+}

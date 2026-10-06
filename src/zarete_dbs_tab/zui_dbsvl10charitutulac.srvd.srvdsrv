@@ -1,0 +1,5 @@
+@ObjectModel.leadingEntity.name: 'ZI_DbsVl10cHariTutulac_S'
+define service ZUI_DBSVL10CHARITUTULAC {
+  expose ZI_DBSVL10CHARITUTULAC_S as DbsVl10cHariTutuAll;
+  expose ZI_DBSVL10CHARITUTULAC as DbsVl10cHariTutulac;
+}

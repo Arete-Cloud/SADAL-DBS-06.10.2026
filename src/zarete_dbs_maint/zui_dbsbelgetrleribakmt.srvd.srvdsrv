@@ -1,0 +1,5 @@
+@ObjectModel.leadingEntity.name: 'ZI_DbsBelgeTRleriBakMT_S'
+define service ZUI_DBSBELGETRLERIBAKMT {
+  expose ZI_DBSBELGETRLERIBAKMT_S as DbsBelgeTRleriBaAll;
+  expose ZI_DBSBELGETRLERIBAKMT as DbsBelgeTRleriBakMT;
+}

@@ -1,0 +1,39 @@
+{
+  "formatVersion": "1",
+  "header": {
+    "description": "DBS-VL10C Hariç Tutulacak Cariler bakımını yap",
+    "originalLanguage": "tr",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "serviceConfiguration": {
+    "serviceBinding": "ZUI_DBSVL10CHARITUTULAC_O4",
+    "serviceName": "ZUI_DBSVL10CHARITUTULAC_O4",
+    "serviceVersion": "0001",
+    "rootEntitySet": "DbsVl10cHariTutuAll",
+    "name": "DBS-VL10C Hariç Tutulacak Cariler",
+    "transportObject": "ZDBSVL10CHARITUTULACT",
+    "configurationGroup": "",
+    "skipRootEntity": true
+  },
+  "appConfiguration": {
+    "listReport": {},
+    "objectPages": [
+      {
+        "entitySet": "DbsVl10cHariTutuAll",
+        "variantManagement": "control"
+      }
+    ],
+    "tableSettings": [
+      {
+        "entitySet": "DbsVl10cHariTutulac",
+        "tableType": "gridTable",
+        "selectAll": true,
+        "rowCountMode": "auto",
+        "frozenColumnCount": 1,
+        "creationModeName": "inlineCreationRows",
+        "createAtEnd": true,
+        "widthIncludingColumnHeader": true
+      }
+    ]
+  }
+}

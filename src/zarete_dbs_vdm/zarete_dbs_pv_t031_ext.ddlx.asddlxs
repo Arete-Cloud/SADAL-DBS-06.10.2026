@@ -1,0 +1,28 @@
+@Metadata.layer: #CORE
+@UI: {
+  headerInfo: {
+    typeName: 'Belgeler',
+    typeNamePlural: 'Belgeler'
+  }
+}
+annotate entity ZARETE_DBS_DD_T031 with
+{
+  @UI.lineItem: [ { position: 10, importance: #MEDIUM, label: 'Belge Numarası' } ]
+  @EndUserText.label: 'Belge Numarası'
+  AccountingDocument;
+  @UI.lineItem: [ { position: 10, importance: #MEDIUM, label: 'Şirket Kodu' } ]
+  @EndUserText.label: 'Şirket Kodu'
+  CompanyCode;
+  @UI.lineItem: [ { position: 10, importance: #MEDIUM, label: 'Mali Yıl' } ]
+  @EndUserText.label: 'Mali Yıl'
+  FiscalYear;
+  @UI.lineItem: [ { position: 10, importance: #MEDIUM, label: 'Fatura No' } ]
+  @EndUserText.label: 'Fatura No'
+  InvoiceNumber;
+  @UI.lineItem: [ { position: 10, importance: #MEDIUM, label: 'ID' } ]
+  @EndUserText.label: 'ID'
+  Id;
+  @UI.lineItem: [ { position: 10, importance: #MEDIUM, label: 'Müşteri' } ]
+  @EndUserText.label: 'Müşteri'
+  Customer;
+}

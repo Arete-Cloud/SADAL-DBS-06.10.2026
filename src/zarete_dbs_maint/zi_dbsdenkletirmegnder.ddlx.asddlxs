@@ -1,0 +1,183 @@
+@Metadata.layer: #CUSTOMER
+@UI: {
+  headerInfo: {
+    typeName: 'DbsDenkleTirmeGNder', 
+    typeNamePlural: 'DbsDenkleTirmeGNders', 
+    title: {
+      type: #STANDARD, 
+      label: 'DBS Denkleştirme Gönderilenler Takip Tab', 
+      value: 'Uuid'
+    }
+  }
+}
+annotate view ZI_DbsDenkleTirmeGNder with
+{
+  @UI.identification: [ {
+    position: 1 
+  } ]
+  @UI.lineItem: [ {
+    position: 1 
+  } ]
+  @UI.facet: [ {
+    id: 'ZI_DbsDenkleTirmeGNder', 
+    purpose: #STANDARD, 
+    type: #IDENTIFICATION_REFERENCE, 
+    label: 'DBS Denkleştirme Gönderilenler Takip Tab', 
+    position: 1 
+  } ]
+  Uuid;
+  
+  @UI.identification: [ {
+    position: 2 
+  } ]
+  @UI.lineItem: [ {
+    position: 2 
+  } ]
+  InvoiceNumber;
+  
+  @UI.identification: [ {
+    position: 3 
+  } ]
+  @UI.lineItem: [ {
+    position: 3 
+  } ]
+  AccountingDocument;
+  
+  @UI.identification: [ {
+    position: 4 
+  } ]
+  @UI.lineItem: [ {
+    position: 4 
+  } ]
+  AccountingDocumentItem;
+  
+  @UI.identification: [ {
+    position: 5 
+  } ]
+  @UI.lineItem: [ {
+    position: 5 
+  } ]
+  InvoiceAccDoc;
+  
+  @UI.identification: [ {
+    position: 6 
+  } ]
+  @UI.lineItem: [ {
+    position: 6 
+  } ]
+  InvoiceAccDocItem;
+  
+  @UI.identification: [ {
+    position: 7 , 
+    label: 'ItemUuid'
+  } ]
+  @UI.lineItem: [ {
+    position: 7 , 
+    label: 'ItemUuid'
+  } ]
+  ItemUuid;
+  
+  @UI.identification: [ {
+    position: 8 , 
+    label: 'Id'
+  } ]
+  @UI.lineItem: [ {
+    position: 8 , 
+    label: 'Id'
+  } ]
+  Id;
+  
+  @UI.identification: [ {
+    position: 9 
+  } ]
+  @UI.lineItem: [ {
+    position: 9 
+  } ]
+  Customer;
+  
+  @UI.identification: [ {
+    position: 10 , 
+    label: 'InvoiceAmount'
+  } ]
+  @UI.lineItem: [ {
+    position: 10 , 
+    label: 'InvoiceAmount'
+  } ]
+  InvoiceAmount;
+  
+  @UI.identification: [ {
+    position: 11 , 
+    label: 'ClearingDocAmount'
+  } ]
+  ClearingDocAmount;
+  
+  @UI.identification: [ {
+    position: 12 , 
+    label: 'UsedAmount'
+  } ]
+  UsedAmount;
+  
+  @UI.identification: [ {
+    position: 13 , 
+    label: 'RemainingAmount'
+  } ]
+  RemainingAmount;
+  
+  @UI.identification: [ {
+    position: 14 , 
+    label: 'Currency'
+  } ]
+  Currency;
+  
+  @UI.identification: [ {
+    position: 15 , 
+    label: 'CreatedClearingDocument'
+  } ]
+  CreatedClearingDocument;
+  
+  @UI.identification: [ {
+    position: 16 , 
+    label: 'ClearingCompanyCode'
+  } ]
+  ClearingCompanyCode;
+  
+  @UI.identification: [ {
+    position: 17 , 
+    label: 'ClearingFiscalYear'
+  } ]
+  ClearingFiscalYear;
+  
+  @UI.identification: [ {
+    position: 18 , 
+    label: 'Message'
+  } ]
+  Message;
+  
+  @UI.identification: [ {
+    position: 19 , 
+    label: 'Status'
+  } ]
+  Status;
+  
+  @UI.identification: [ {
+    position: 20 
+  } ]
+  ResponseDate;
+  
+  @UI.identification: [ {
+    position: 21 
+  } ]
+  ResponseTime;
+  
+  @UI.identification: [ {
+    position: 22 , 
+    label: 'Reverse'
+  } ]
+  Reverse;
+  
+  @UI.identification: [ {
+    position: 23 , 
+    label: 'Kısmi Fatura No'
+  } ]
+  PartialInvoiceNumber;
+}

@@ -1,0 +1,36 @@
+@Metadata.layer: #CUSTOMER
+@UI: {
+  headerInfo: {
+    typeName: 'DBS - Belge Türleri Bakım Tablosu', 
+    typeNamePlural: 'DBS - Belge Türleri Bakım Tablosu', 
+    title: {
+      type: #STANDARD, 
+      value: 'Accountingdocumenttype'
+    }
+  }
+}
+annotate view ZI_DbsBelgeTRleriBakMT with
+{
+  @UI.identification: [ {
+    position: 1 
+  } ]
+  @UI.lineItem: [ {
+    position: 1 
+  } ]
+  @UI.facet: [ {
+    id: 'DbsBelgeTRleriBakMT', 
+    purpose: #STANDARD, 
+    type: #IDENTIFICATION_REFERENCE, 
+    label: 'DBS - Belge Türleri Bakım Tablosu', 
+    position: 1 
+  } ]
+  Accountingdocumenttype;
+  
+  @UI.identification: [ {
+    position: 2 
+  } ]
+  @UI.lineItem: [ {
+    position: 2 
+  } ]
+  Debitcreditcode;
+}

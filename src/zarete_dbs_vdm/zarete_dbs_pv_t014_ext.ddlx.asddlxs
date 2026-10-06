@@ -1,0 +1,60 @@
+@Metadata.layer: #CORE
+@UI: {
+  headerInfo: {
+    typeName: 'A_SAPCompany',
+    typeNamePlural: 'A_SAPCompany'
+  }
+}
+annotate entity ZARETE_DBS_PV_T014 with
+
+{
+ @UI.facet: [
+    { id: 'id001' ,
+              purpose: #HEADER,
+              label: 'SAP Company' ,
+              type: #FIELDGROUP_REFERENCE,
+              targetQualifier: 'hdFi',
+              position: 10 } ,
+      { id:'id002' ,
+                   type: #COLLECTION ,
+                   label: 'Company' ,
+                   position: 10 } ,
+
+                    { type: #IDENTIFICATION_REFERENCE ,
+                   label : 'Company Details' ,
+                   parentId: 'id002',
+                   id: 'id003' ,
+                   position: 10 }
+                                 ]
+ @UI.fieldGroup: [{ qualifier: 'Company' , position: 10 }]
+  @UI.lineItem: [ {
+  position: 10 ,
+  importance: #MEDIUM,
+  label: 'Company Code'
+  } ]
+  @UI.identification: [ {
+  position: 10 ,
+  label: 'Company Code'
+  } ]
+  @EndUserText.label: 'Company Code'
+  @Consumption.valueHelpDefinition: [{entity: {name: 'ZARETE_DBS_DD_COMPANY_001', element: 'company_code' },
+                                                                 additionalBinding  : [{ localElement   : 'CompanyIdentifier',
+                                                                     element        : 'vatregistration'
+                                                                   }
+                                                                   ]}]
+  CompanyCode;
+    @UI.fieldGroup: [{ qualifier: 'Company' , position: 10 }]
+  @UI.lineItem: [ {
+  position: 20 ,
+  importance: #MEDIUM,
+  label: 'CompanyIdentifier'
+  } ]
+  @UI.identification: [ {
+  position: 20 ,
+  label: 'CompanyIdentifier'
+  } ]
+  @EndUserText.label: 'CompanyIdentifier'
+  CompanyIdentifier;
+   @EndUserText.label: 'UUID'
+  UUID;
+}

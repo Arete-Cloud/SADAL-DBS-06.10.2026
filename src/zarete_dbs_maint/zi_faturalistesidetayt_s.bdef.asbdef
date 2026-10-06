@@ -1,0 +1,123 @@
+managed with additional save implementation in class ZBP_I_FATURALISTESIDETAYT_S unique;
+strict;
+with draft;
+define behavior for ZI_FaturaListesiDetayT_S alias FaturaListesiDetAll
+draft table ZARETE_T015_D
+with unmanaged save
+lock master total etag LastChangedAtMax
+authorization master( global )
+{
+  field ( readonly )
+   SingletonID;
+//   TransportRequestID;
+
+  field ( notrigger )
+   SingletonID,
+//   HideTransport,
+   LastChangedAtMax;
+
+
+  update;
+  internal create;
+  internal delete;
+
+  draft action ( features : instance ) Edit with additional implementation;
+  draft action Activate optimized;
+  draft action Discard;
+  draft action Resume;
+  draft determine action Prepare;
+//  action ( features : instance ) SelectCustomizingTransptReq parameter D_SelectCustomizingTransptReqP result [1] $self;
+
+  association _FaturaListesiDetayT { create ( features : instance ); with draft; }
+
+//  validation ValidateTransportRequest on save ##NOT_ASSIGNED_TO_DETACT
+//  {
+//    create;
+//    update;
+//  }
+//
+//  side effects
+//  {
+//    action SelectCustomizingTransptReq affects
+//        $self;
+//  }
+
+}
+
+define behavior for ZI_FaturaListesiDetayT alias FaturaListesiDetayT ##UNMAPPED_FIELD
+persistent table ZARETE_DBS_T015
+draft table ZARETE_T015_DS
+etag master LocalLastChangedAt
+lock dependent by _FaturaListesiDetAll
+authorization dependent by _FaturaListesiDetAll
+{
+  field ( mandatory : create )
+   InvoiceNumber,
+   Id;
+
+  field ( readonly )
+   SingletonID,
+   Uuid,
+   CreatedBy,
+   CreatedAt,
+   LastChangedAt,
+   LocalLastChangedBy,
+   LocalLastChangedAt;
+
+  field ( numbering : managed )
+   Uuid;
+
+  field ( readonly : update )
+   InvoiceNumber,
+   Id;
+
+  field ( notrigger )
+   SingletonID,
+   CreatedBy,
+   CreatedAt,
+   LastChangedAt,
+   LocalLastChangedBy,
+   LocalLastChangedAt;
+
+
+  update( features : global );
+  delete( features : global );
+
+  mapping for ZARETE_DBS_T015
+  {
+    Uuid = UUID;
+    InvoiceNumber = INVOICE_NUMBER;
+    Id = ID;
+    InvoiceAccDoc = INVOICE_ACC_DOC;
+    InvoiceAccDocItem = INVOICE_ACC_DOC_ITEM;
+    DbsInvoiceId = DBS_INVOICE_ID;
+    ScenarioType = SCENARIO_TYPE;
+    Statu = STATU;
+    AccountingDocument = ACCOUNTING_DOCUMENT;
+    ClearingDocument = CLEARING_DOCUMENT;
+    CompanyCode = COMPANY_CODE;
+    FiscalYear = FISCAL_YEAR;
+    TransactionDate = TRANSACTION_DATE;
+    Amount = AMOUNT;
+    DueDate = DUE_DATE;
+    FiAccount = FI_ACCOUNT;
+    DbsAccountId = DBS_ACCOUNT_ID;
+    IsCancelled = IS_CANCELLED;
+    AccError = ACC_ERROR;
+    CreatedBy = CREATED_BY;
+    CreatedAt = CREATED_AT;
+    LastChangedAt = LAST_CHANGED_AT;
+    LocalLastChangedBy = LOCAL_LAST_CHANGED_BY;
+    LocalLastChangedAt = LOCAL_LAST_CHANGED_AT;
+  }
+
+  association _FaturaListesiDetAll { with draft; }
+
+//  validation ValidateTransportRequest on save ##NOT_ASSIGNED_TO_DETACT
+//  {
+//    create;
+//    update;
+//    delete;
+//  }
+
+}

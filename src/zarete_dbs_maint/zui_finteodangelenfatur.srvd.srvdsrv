@@ -1,0 +1,5 @@
+@ObjectModel.leadingEntity.name: 'ZI_FinteodanGelenFatur_S'
+define service ZUI_FINTEODANGELENFATUR {
+  expose ZI_FINTEODANGELENFATUR_S as FinteodanGelenFaAll;
+  expose ZI_FINTEODANGELENFATUR as FinteodanGelenFatur;
+}

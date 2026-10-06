@@ -1,0 +1,5 @@
+@ObjectModel.leadingEntity.name: 'ZI_FinteoFaturalarTabl_S'
+define service ZUI_FINTEOFATURALARTABL {
+  expose ZI_FINTEOFATURALARTABL_S as FinteoFaturalarTAll;
+  expose ZI_FINTEOFATURALARTABL as FinteoFaturalarTabl;
+}

@@ -1,0 +1,43 @@
+@Metadata.layer: #CORE
+annotate entity ZARETE_DBS_PV_T001 with
+{
+  @UI.lineItem: [{ importance: #MEDIUM }]
+  @UI.identification: [{ importance: #MEDIUM }]
+  LogId;
+  @UI.lineItem: [{ importance: #MEDIUM }]
+  @UI.identification: [{ importance: #MEDIUM }]
+  SapInvoiceNo;
+  @UI.lineItem: [{ importance: #MEDIUM }]
+  @UI.identification: [{ importance: #MEDIUM }]
+  Id;
+  @UI.lineItem: [{ importance: #MEDIUM }]
+  @UI.identification: [{ importance: #MEDIUM }]
+  BankCode;
+  @UI.lineItem: [{ importance: #MEDIUM }]
+  @UI.identification: [{ importance: #MEDIUM }]
+  Msgid;
+  @UI.lineItem: [{ importance: #MEDIUM }]
+  @UI.identification: [{ importance: #MEDIUM }]
+  Msgno;
+  @UI.lineItem: [{ importance: #MEDIUM }]
+  @UI.identification: [{ importance: #MEDIUM }]
+  Msgty;
+  @UI.lineItem: [{ importance: #MEDIUM }]
+  @UI.identification: [{ importance: #MEDIUM }]
+  Msgv1;
+  @UI.lineItem: [{ importance: #MEDIUM }]
+  @UI.identification: [{ importance: #MEDIUM }]
+  Msgv2;
+  @UI.lineItem: [{ importance: #MEDIUM }]
+  @UI.identification: [{ importance: #MEDIUM }]
+  Msgv3;
+  @UI.lineItem: [{ importance: #MEDIUM }]
+  @UI.identification: [{ importance: #MEDIUM }]
+  Msgv4;
+  @UI.lineItem: [{ importance: #MEDIUM }]
+  @UI.identification: [{ importance: #MEDIUM }]
+  Message;
+  @UI.lineItem: [{ importance: #MEDIUM }]
+  @UI.identification: [{ importance: #MEDIUM }]
+  LocalLastChangedAt;
+}

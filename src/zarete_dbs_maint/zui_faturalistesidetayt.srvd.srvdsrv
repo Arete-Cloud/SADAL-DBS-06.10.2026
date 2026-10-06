@@ -1,0 +1,5 @@
+@ObjectModel.leadingEntity.name: 'ZI_FaturaListesiDetayT_S'
+define service ZUI_FATURALISTESIDETAYT {
+  expose ZI_FATURALISTESIDETAYT_S as FaturaListesiDetAll;
+  expose ZI_FATURALISTESIDETAYT as FaturaListesiDetayT;
+}

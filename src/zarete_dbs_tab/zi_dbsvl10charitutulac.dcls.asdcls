@@ -1,0 +1,5 @@
+@MappingRole: true
+define role ZI_DbsVl10cHariTutulac {
+  grant select on ZI_DbsVl10cHariTutulac
+  where ( ) = ASPECT pfcg_auth ( 'S_TABU_NAM', ACTVT = '03', TABLE = 'ZI_DBSVL10CHARITUTULAC' );
+}

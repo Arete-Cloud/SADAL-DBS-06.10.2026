@@ -1,0 +1,14 @@
+CLASS lhc_ZARETE_DBS_DD_T018 DEFINITION INHERITING FROM cl_abap_behavior_handler.
+  PRIVATE SECTION.
+
+    METHODS get_global_authorizations FOR GLOBAL AUTHORIZATION
+      IMPORTING REQUEST requested_authorizations FOR zarete_dbs_dd_t018 RESULT result.
+
+ENDCLASS.
+
+CLASS lhc_ZARETE_DBS_DD_T018 IMPLEMENTATION.
+
+  METHOD get_global_authorizations.
+  ENDMETHOD.
+
+ENDCLASS.

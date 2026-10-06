@@ -1,0 +1,52 @@
+@Metadata.layer: #CORE
+@UI: {
+  headerInfo: {
+    typeName: 'A_Belgeturu',
+    typeNamePlural: 'A_Belgeturu'
+  }
+}
+annotate entity ZARETE_DBS_PV_T005 with
+{
+  @UI.facet: [
+      { id: 'idheader' ,
+              purpose: #HEADER,
+              label: 'BELGE TÜRÜ TANIMLAMA' ,
+              type: #FIELDGROUP_REFERENCE,
+              targetQualifier: 'hdRelation'} ,
+     { id:'idBelgeTuru' ,
+                  type: #COLLECTION ,
+                  label: 'BELGE TÜRÜ TANIMLARI' ,
+                  position: 10 } ,
+
+                   { type: #IDENTIFICATION_REFERENCE ,
+                  label : 'Belge Türleri',
+                  parentId: 'idBelgeTuru',
+                  id: 'idBelgeTuruTanim' ,
+                  position: 10 }
+                                ]
+  @UI.fieldGroup: [{ qualifier: 'Belge Türleri' , position: 10 }]
+  @UI.lineItem: [ {
+    position: 10 ,
+    importance: #MEDIUM,
+    label: 'Belge Türü'
+   } ]
+  @UI.identification: [ {
+  position: 10 ,
+  label: 'Belge Türü'
+  } ]
+  @EndUserText.label: 'Belge Türü'
+  BelgeTuru;
+  @UI.fieldGroup: [{ qualifier: 'Belge Türleri' , position: 20 }]
+  @UI.lineItem: [ {
+    position: 20 ,
+    importance: #MEDIUM,
+    label: 'Belge Türü Açıklaması'
+   } ]
+  @UI.identification: [ {
+  position: 20 ,
+  label: 'Belge Türü Açıklaması'
+  } ]
+  @EndUserText.label: 'Belge Türü Açıklaması'
+  BelgeTuruDescription;
+
+}

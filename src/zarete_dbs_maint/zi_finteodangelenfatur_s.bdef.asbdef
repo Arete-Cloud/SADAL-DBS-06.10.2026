@@ -1,0 +1,102 @@
+managed implementation in class ZBP_I_FINTEODANGELENFATUR_S unique;
+strict;
+with draft;
+define behavior for ZI_FinteodanGelenFatur_S alias FinteodanGelenFaAll
+draft table ZARETE_DBS_T4_S
+with unmanaged save
+lock master total etag LastChangedAtMax
+authorization master( global )
+{
+  field ( readonly )
+   SingletonID;
+
+  field ( notrigger )
+   SingletonID,
+   LastChangedAtMax;
+
+
+  update;
+  internal create;
+  internal delete;
+
+  draft action ( features : instance ) Edit;
+  draft action Activate optimized;
+  draft action Discard;
+  draft action Resume;
+  draft determine action Prepare;
+
+  association _FinteodanGelenFatur { create ( features : instance ); with draft; }
+
+}
+
+define behavior for ZI_FinteodanGelenFatur alias FinteodanGelenFatur ##UNMAPPED_FIELD
+persistent table ZARETE_DBS_T016
+draft table ZARETE_DBS_T4_D
+etag master LocalLastChangedAt
+lock dependent by _FinteodanGelenFaAll
+authorization dependent by _FinteodanGelenFaAll
+{
+  field ( mandatory : create )
+   Identifier,
+   DbsInvoiceId;
+
+  field ( readonly )
+   SingletonID,
+   CreatedBy,
+   CreatedAt,
+   LastChangedAt,
+   LocalLastChangedBy,
+   LocalLastChangedAt;
+
+  field ( readonly : update )
+   Identifier,
+   DbsInvoiceId;
+
+  field ( notrigger )
+   SingletonID,
+   CreatedBy,
+   CreatedAt,
+   LastChangedAt,
+   LocalLastChangedBy,
+   LocalLastChangedAt;
+
+
+  update( features : global );
+  delete( features : global );
+
+  mapping for ZARETE_DBS_T016
+  {
+    Identifier = IDENTIFIER;
+    DbsInvoiceId = DBS_INVOICE_ID;
+    Id = ID;
+    Amount = AMOUNT;
+    DeletedAmount = DELETED_AMOUNT;
+    CurrencyCode = CURRENCY_CODE;
+    DueDate = DUE_DATE;
+    SendDate = SEND_DATE;
+    InvoiceNumber = INVOICE_NUMBER;
+    PartialInvoiceNumber = PARTIAL_INVOICE_NUMBER;
+    InvoiceAmountDue = INVOICE_AMOUNT_DUE;
+    LastPaymentDate = LAST_PAYMENT_DATE;
+    PartialGuaranteedAmount = PARTIAL_GUARANTEED_AMOUNT;
+    AmountRemainingBeforePaymen = AMOUNT_REMAINING_BEFORE_PAYMEN;
+    PaymentDescription = PAYMENT_DESCRIPTION;
+    StatusCode = STATUS_CODE;
+    StatusDescription = STATUS_DESCRIPTION;
+    TransactionDate = TRANSACTION_DATE;
+    DbsAccountId = DBS_ACCOUNT_ID;
+    PartyCode = PARTY_CODE;
+    PartyTitle = PARTY_TITLE;
+    PartyTaxNumber = PARTY_TAX_NUMBER;
+    BankCode = BANK_CODE;
+    BankName = BANK_NAME;
+    CreatedBy = CREATED_BY;
+    CreatedAt = CREATED_AT;
+    LastChangedAt = LAST_CHANGED_AT;
+    LocalLastChangedBy = LOCAL_LAST_CHANGED_BY;
+    LocalLastChangedAt = LOCAL_LAST_CHANGED_AT;
+  }
+
+  association _FinteodanGelenFaAll { with draft; }
+
+}

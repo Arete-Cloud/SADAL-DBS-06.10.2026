@@ -1,0 +1,40 @@
+{
+  "formatVersion": "1",
+  "header": {
+    "description": "DBS - Belge Türleri Bakım Tablosu bakımını yap",
+    "originalLanguage": "tr",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "serviceConfiguration": {
+    "serviceBinding": "ZUI_DBSBELGETRLERIBAKMT_O4",
+    "serviceName": "ZUI_DBSBELGETRLERIBAKMT_O4",
+    "serviceVersion": "0001",
+    "rootEntitySet": "DbsBelgeTRleriBaAll",
+    "name": "DBS - Belge Türleri Bakım Tablosu",
+    "transportObject": "ZDBSBELGETRLERIBAKMTT",
+    "configurationGroup": "",
+    "skipRootEntity": true
+  },
+  "appConfiguration": {
+    "listReport": {},
+    "objectPages": [
+      {
+        "entitySet": "DbsBelgeTRleriBaAll",
+        "variantManagement": "control"
+      }
+    ],
+    "tableSettings": [
+      {
+        "entitySet": "DbsBelgeTRleriBakMT",
+        "tableType": "gridTable",
+        "selectAll": true,
+        "rowCountMode": "auto",
+        "frozenColumnCount": 2,
+        "creationModeName": "inlineCreationRows",
+        "createAtEnd": true,
+        "condensedTableLayout": true,
+        "widthIncludingColumnHeader": true
+      }
+    ]
+  }
+}

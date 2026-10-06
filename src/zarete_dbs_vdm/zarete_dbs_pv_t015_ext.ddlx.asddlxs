@@ -1,0 +1,47 @@
+@Metadata.layer: #CORE
+
+@UI: {
+  headerInfo: {
+    typeName: 'A_FinteoHareketleri',
+    typeNamePlural: 'A_FinteoHareketleri'
+  }
+}
+annotate entity ZARETE_DBS_DD_T015 with
+{
+  @UI.lineItem: [ { position: 10, importance: #MEDIUM, label: 'UUID' } ]
+  @EndUserText.label: 'UUID'
+  Uuid;
+  @UI.lineItem: [ { position: 20, importance: #MEDIUM, label: 'Fatura No' } ]
+  @EndUserText.label: 'Fatura No'
+  InvoiceNumber;
+  @UI.lineItem: [ { position: 30, importance: #MEDIUM, label: 'Fatura ID' } ]
+  @EndUserText.label: 'Fatura ID'
+  DbsInvoiceId;
+  @UI.lineItem: [ { position: 40, importance: #MEDIUM, label: 'Senaryo Tipi' } ]
+  @EndUserText.label: 'Senaryo Tipi'
+  ScenarioType;
+  @UI.lineItem: [ { position: 50, importance: #MEDIUM, label: 'Statü' } ]
+  @EndUserText.label: 'Statü'
+  Statu;
+  @UI.lineItem: [ { position: 60, importance: #MEDIUM, label: 'AccDoc' } ]
+  @EndUserText.label: 'AccDoc'
+  AccountingDocument;
+  @UI.lineItem: [ { position: 70, importance: #MEDIUM, label: 'Şirket Kodu' } ]
+  @EndUserText.label: 'Şirket Kodu'
+  CompanyCode;
+  @UI.lineItem: [ { position: 80, importance: #MEDIUM, label: 'Mali Yıl' } ]
+  @EndUserText.label: 'Mali Yıl'
+  FiscalYear;
+  @UI.lineItem: [ { position: 90, importance: #MEDIUM, label: 'İşlem Tarihi' } ]
+  @EndUserText.label: 'İşlem Tarihi'
+  TransactionDate;
+  @UI.lineItem: [ { position: 100, importance: #MEDIUM, label: 'FI Hesabı' } ]
+  @EndUserText.label: 'FI Hesabı'
+  FiAccount;
+  @UI.lineItem: [ { position: 110, importance: #MEDIUM, label: 'DBS Hesap No' } ]
+  @EndUserText.label: 'DBS Hesap No'
+  DbsAccountId;
+  @UI.lineItem: [ { position: 120, importance: #MEDIUM, label: 'ID' } ]
+  @EndUserText.label: 'ID'
+  Id;
+}

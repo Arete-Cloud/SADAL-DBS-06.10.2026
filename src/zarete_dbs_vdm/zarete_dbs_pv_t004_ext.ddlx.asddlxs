@@ -1,0 +1,52 @@
+@Metadata.layer: #CORE
+@UI: {
+  headerInfo: {
+    typeName: 'A_Aksiyonlar',
+    typeNamePlural: 'A_Aksiyonlar'
+  }
+}
+annotate entity ZARETE_DBS_PV_T004 with
+{
+  @UI.facet: [
+        { id: 'id001' ,
+                purpose: #HEADER,
+                label: 'AKSIYON TANIMLAMALARI' ,
+                type: #FIELDGROUP_REFERENCE,
+                targetQualifier: 'hdRelation'} ,
+       { id:'id002' ,
+                    type: #COLLECTION ,
+                    label: 'AKSIYON TANIMLAMA' ,
+                    position: 10 } ,
+
+                     { type: #IDENTIFICATION_REFERENCE ,
+                    label : 'AKSIYONLAR',
+                    parentId: 'id002',
+                    id: 'id003' ,
+                    position: 10 }
+                                  ]
+  @UI.fieldGroup: [{ qualifier: 'AKSIYONLAR' , position: 10 }]
+  @UI.lineItem: [ {
+   position: 10 ,
+   importance: #MEDIUM,
+   label: 'Aksiyon Kodu'
+  } ]
+  @UI.identification: [ {
+  position: 10 ,
+  label: 'Aksiyon Kodu'
+  } ]
+  @EndUserText.label: 'Aksiyon Kodu'
+  ActionCode;
+    @UI.fieldGroup: [{ qualifier: 'AKSIYONLAR' , position: 10 }]
+  @UI.lineItem: [ {
+   position: 20 ,
+   importance: #MEDIUM,
+   label: 'Aksiyon Tanımı'
+  } ]
+  @UI.identification: [ {
+  position: 20 ,
+  label: 'Aksiyon Tanımı'
+  } ]
+  @EndUserText.label: 'Aksiyon Tanımı'
+  ActionDefinition;
+
+}

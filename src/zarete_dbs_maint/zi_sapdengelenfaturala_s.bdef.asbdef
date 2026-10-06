@@ -1,0 +1,127 @@
+managed with additional save implementation in class ZBP_I_SAPDENGELENFATURALA_S unique;
+strict;
+with draft;
+define behavior for ZI_SapdenGelenFaturala_S alias SapdenGelenFaturAll
+draft table ZARETE_DBS_D_G
+with unmanaged save
+lock master total etag LastChangedAtMax
+authorization master( global )
+{
+  field ( readonly )
+   SingletonID;
+//   TransportRequestID;
+
+  field ( notrigger )
+   SingletonID,
+//   HideTransport,
+   LastChangedAtMax;
+
+
+  update;
+  internal create;
+  internal delete;
+
+  draft action ( features : instance ) Edit with additional implementation;
+  draft action Activate optimized;
+  draft action Discard;
+  draft action Resume;
+  draft determine action Prepare;
+
+//  action ( features : instance ) SelectCustomizingTransptReq parameter D_SelectCustomizingTransptReqP result [1] $self;
+
+  association _SapdenGelenFaturala { create ( features : instance ); with draft; }
+
+//  validation ValidateTransportRequest on save ##NOT_ASSIGNED_TO_DETACT
+//  {
+//    create;
+//    update;
+//  }
+//
+//  side effects
+//  {
+//    action SelectCustomizingTransptReq affects
+//        $self;
+//  }
+
+}
+
+define behavior for ZI_SapdenGelenFaturala alias SapdenGelenFaturala ##UNMAPPED_FIELD
+persistent table ZARETE_DBS_T017
+draft table ZARETE_DBS_T0_D
+etag master LocalLastChangedAt
+lock dependent by _SapdenGelenFaturAll
+authorization dependent by _SapdenGelenFaturAll
+{
+  field ( mandatory : create )
+   CompanyCode,
+   FiscalYear,
+   AccountingDocument,
+   AccountingDocumentItem,
+   DocumentReferenceId;
+
+  field ( readonly )
+   SingletonID,
+   CreatedBy,
+   CreatedAt,
+   LastChangedAt,
+   LocalLastChangedBy,
+   LocalLastChangedAt;
+
+  field ( readonly : update )
+   CompanyCode,
+   FiscalYear,
+   AccountingDocument,
+   AccountingDocumentItem,
+   DocumentReferenceId;
+
+  field ( notrigger )
+   SingletonID,
+   CreatedBy,
+   CreatedAt,
+   LastChangedAt,
+   LocalLastChangedBy,
+   LocalLastChangedAt;
+
+
+  update( features : global );
+  delete( features : global );
+
+  mapping for ZARETE_DBS_T017
+  {
+    CompanyCode = COMPANY_CODE;
+    FiscalYear = FISCAL_YEAR;
+    AccountingDocument = ACCOUNTING_DOCUMENT;
+    AccountingDocumentItem = ACCOUNTING_DOCUMENT_ITEM;
+    DocumentReferenceId = DOCUMENT_REFERENCE_ID;
+    DebitCreditCode = DEBIT_CREDIT_CODE;
+    DocumentItemText = DOCUMENT_ITEM_TEXT;
+    Customer = CUSTOMER;
+    CustomerName = CUSTOMER_NAME;
+    PostingDate = POSTING_DATE;
+    DocumentDate = DOCUMENT_DATE;
+    NetDueDate = NET_DUE_DATE;
+    ValueDate = VALUE_DATE;
+    HouseBank = HOUSE_BANK;
+    AccountingDocumentType = ACCOUNTING_DOCUMENT_TYPE;
+    AmountInTransactionCurr = AMOUNT_IN_TRANSACTION_CURR;
+    TransactionCurrency = TRANSACTION_CURRENCY;
+    AssignmentReference = ASSIGNMENT_REFERENCE;
+    ClearingAccountingDocume = CLEARING_ACCOUNTING_DOCUME;
+    ClearingDocFiscalYear = CLEARING_DOC_FISCAL_YEAR;
+    CreatedBy = CREATED_BY;
+    CreatedAt = CREATED_AT;
+    LastChangedAt = LAST_CHANGED_AT;
+    LocalLastChangedBy = LOCAL_LAST_CHANGED_BY;
+    LocalLastChangedAt = LOCAL_LAST_CHANGED_AT;
+  }
+
+  association _SapdenGelenFaturAll { with draft; }
+
+//  validation ValidateTransportRequest on save ##NOT_ASSIGNED_TO_DETACT
+//  {
+//    create;
+//    update;
+//    delete;
+//  }
+
+}

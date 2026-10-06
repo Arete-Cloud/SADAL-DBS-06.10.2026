@@ -1,0 +1,187 @@
+@Metadata.layer: #CORE
+@UI: {
+  headerInfo: {
+    typeName: 'A_BPFinteoSirket',
+    typeNamePlural: 'A_BPFinteoSirket'
+  }
+}
+annotate entity ZARETE_DBS_PV_T012 with
+{
+
+  @UI.facet: [
+   { id: 'idCompany' ,
+     purpose: #HEADER,
+     label: 'COMPANY INFORMATION' ,
+     type: #FIELDGROUP_REFERENCE,
+     targetQualifier: 'CompanyInfo'} ,
+
+   { id: 'idFinteo' ,
+     purpose: #HEADER,
+     label: 'FINTEO INFORMATION' ,
+     type: #FIELDGROUP_REFERENCE,
+     targetQualifier: 'FinteoInfo'} ,
+
+   { id:'idSapInfo' ,
+     type: #COLLECTION ,
+     label: 'SAP INFORMATION' ,
+     position: 10 } ,
+
+   { type: #IDENTIFICATION_REFERENCE ,
+     label : 'SAP Bank Information',
+     parentId: 'idSapInfo',
+     id: 'idSapBank' ,
+     position: 10 },
+
+   { type: #FIELDGROUP_REFERENCE ,
+     label : 'SAP Business Partner Information',
+     targetQualifier: 'SAPBP' ,
+     parentId: 'idSapInfo' ,
+     id : 'idSapBP' ,
+     position: 20 }
+  ]
+
+
+  @UI.fieldGroup: [{ qualifier: 'FinteoInfo' , position: 10 }]
+  @UI.lineItem: [ {
+  position: 10 ,
+  importance: #MEDIUM,
+  label: 'Finteo Party Code'
+   } ]
+  @EndUserText.label: 'Finteo Party Code'
+  PartyCode;
+  @UI.fieldGroup: [{ qualifier: 'FinteoInfo' , position: 20 }]
+  @UI.lineItem: [ {
+  position: 20 ,
+  importance: #MEDIUM,
+  label: 'Finteo VKN'
+   } ]
+  @EndUserText.label: 'Finteo VKN'
+  PartyTaxNumber;
+  @UI.fieldGroup: [{ qualifier: 'FinteoInfo' , position: 30 }]
+  @UI.lineItem: [ {
+  position: 30 ,
+  importance: #MEDIUM,
+  label: 'Finteo Bank Code'
+   } ]
+  @EndUserText.label: 'Finteo Bank Code'
+  FinteoBankCode;
+  //  @UI.fieldGroup: [{ qualifier: 'FinteoInfo' , position: 40 }]
+  //  @UI.lineItem: [ {
+  //  position: 40 ,
+  //  importance: #MEDIUM,
+  //  label: 'Finteo Identifier'
+  //   } ]
+  //  @EndUserText.label: 'Finteo Identifier'
+  //  Identifier;
+  @UI.fieldGroup: [{ qualifier: 'FinteoInfo' , position: 50 }]
+  @UI.lineItem: [ {
+  position: 50 ,
+  importance: #MEDIUM,
+  label: 'Finteo Limit ID'
+   } ]
+  @EndUserText.label: 'Finteo Limit ID'
+  LimitId;
+
+
+  @UI.fieldGroup: [{ qualifier: 'SAP Bank Information' , position: 10 }]
+  @UI.lineItem: [ {
+  position: 60 ,
+  importance: #MEDIUM,
+  label: 'GL Account'
+   } ]
+  @UI.identification: [ {
+   position: 10 ,
+   label: 'GL Account'
+  } ]
+  @EndUserText.label: 'GL Account'
+  @Consumption.valueHelpDefinition: [{entity: {name: 'ZARETE_DBS_DD_HOUSE_BANK_001', element: 'glaccount' },
+                                               additionalBinding  : [{ localElement   : 'CompanyCode',
+                                                                       element        : 'company_code'
+                                                                     },
+                                                                     { localElement   : 'HouseBank',
+                                                                      element        : 'house_bank'
+                                                                      },
+                                                                      { localElement   : 'HouseBankAccount',
+                                                                      element        : 'house_bank_account'
+                                                                      }]}]
+  Glaccount;
+  @UI.fieldGroup: [{ qualifier: 'SAP Bank Information' , position: 20 }]
+  @UI.lineItem: [ {
+  position: 70 ,
+  importance: #MEDIUM,
+  label: 'House Bank'
+   } ]
+  @UI.identification: [ {
+  position: 20 ,
+  label: 'House Bank'
+  } ]
+  @EndUserText.label: 'House Bank'
+  HouseBank;
+  @UI.fieldGroup: [{ qualifier: 'SAP Bank Information' , position: 30 }]
+  @UI.lineItem: [ {
+  position: 80 ,
+  importance: #MEDIUM,
+  label: 'House Bank Account'
+   } ]
+  @UI.identification: [ {
+  position: 30 ,
+  label: 'House Bank Account'
+  } ]
+  @EndUserText.label: 'House Bank Account'
+  HouseBankAccount;
+  @UI.fieldGroup: [{ qualifier: 'SAP Bank Information' , position: 40 }]
+  @UI.lineItem: [ {
+  position: 90 ,
+  importance: #MEDIUM,
+  label: 'Bank Priority'
+   } ]
+  @UI.identification: [ {
+  position: 40 ,
+  label: 'Bank Priority'
+  } ]
+  @EndUserText.label: 'Bank Priority'
+  BankPriority;
+
+
+  @UI.fieldGroup: [{ qualifier: 'CompanyInfo' , position: 10 }]
+  @UI.lineItem: [ {
+  position: 90 ,
+  importance: #MEDIUM,
+  label: 'Şirket Kodu'
+   } ]
+  @EndUserText.label: 'Şirket Kodu'
+  CompanyCode;
+  @UI.fieldGroup: [{ qualifier: 'CompanyInfo' , position: 20 }]
+  @UI.lineItem: [ {
+  position: 100 ,
+  importance: #MEDIUM,
+  label: 'Şirket VKN'
+   } ]
+  @EndUserText.label: 'Şirket VKN'
+  CompanyIdentifier;
+
+
+  @UI.fieldGroup: [{ qualifier: 'SAPBP' , position: 10 }]
+  @UI.lineItem: [ {
+  position: 110 ,
+  importance: #MEDIUM,
+  label: 'BP NO'
+   } ]
+  @UI.identification: [{ position: 110, label: 'BP NO' }]
+  @EndUserText.label: 'BP NO'
+  @Consumption.valueHelpDefinition: [{entity: {name: 'ZARETE_DBS_DD_BP_001', element: 'business_partner' },
+                                              additionalBinding  : [{ localElement   : 'BpTaxNumber',
+                                                                      element        : 'bptax_number'
+                                                                    }]}]
+  BpNo;
+  @UI.fieldGroup: [{ qualifier: 'SAPBP' , position: 20 }]
+  @UI.lineItem: [ {
+  position: 120 ,
+  importance: #MEDIUM,
+  label: 'BP VKN'
+   } ]
+  @EndUserText.label: 'BP VKN'
+  BpTaxNumber;
+
+
+}

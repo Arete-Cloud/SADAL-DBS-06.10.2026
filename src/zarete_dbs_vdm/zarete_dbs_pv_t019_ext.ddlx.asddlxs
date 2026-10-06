@@ -1,0 +1,17 @@
+@Metadata.layer: #CORE
+
+@UI: {
+  headerInfo: {
+    typeName: 'Banka',
+    typeNamePlural: 'Banka'
+  }
+}
+annotate entity ZARETE_DBS_DD_T019 with
+{
+  @UI.lineItem: [ { position: 10, importance: #MEDIUM, label: 'Banka Kodu' } ]
+  @EndUserText.label: 'Banka Kodu'
+  BankCode;
+  @UI.lineItem: [ { position: 20, importance: #MEDIUM, label: 'Banka Adı' } ]
+  @EndUserText.label: 'Banka Adı'
+  BankName;
+}

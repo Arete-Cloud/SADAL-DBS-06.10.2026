@@ -1,0 +1,99 @@
+managed with additional save implementation in class ZBP_I_DBSVL10CHARITUTULAC_S unique;
+strict;
+with draft;
+define behavior for ZI_DbsVl10cHariTutulac_S alias DbsVl10cHariTutuAll
+draft table ZARETE_DBS_DR_S
+with unmanaged save
+lock master total etag LastChangedAtMax
+authorization master( global )
+{
+  field ( readonly )
+   SingletonID;
+//   TransportRequestID;
+
+  field ( notrigger )
+   SingletonID,
+   HideTransport,
+   LastChangedAtMax;
+
+
+  update;
+  internal create;
+  internal delete;
+
+  draft action ( features : instance ) Edit with additional implementation;
+  draft action Activate optimized;
+  draft action Discard;
+  draft action Resume;
+  draft determine action Prepare;
+//  action ( features : instance ) SelectCustomizingTransptReq parameter D_SelectCustomizingTransptReqP result [1] $self;
+
+  association _DbsVl10cHariTutulac { create ( features : instance ); with draft; }
+
+//  validation ValidateTransportRequest on save ##NOT_ASSIGNED_TO_DETACT
+//  {
+//    create;
+//    update;
+//  }
+//
+//  side effects
+//  {
+//    action SelectCustomizingTransptReq affects
+//        $self;
+//  }
+
+}
+
+define behavior for ZI_DbsVl10cHariTutulac alias DbsVl10cHariTutulac ##UNMAPPED_FIELD
+persistent table ZARETE_DBS_T025
+draft table zarete_dbs_t2_d
+etag master LocalLastChangedAt
+lock dependent by _DbsVl10cHariTutuAll
+authorization dependent by _DbsVl10cHariTutuAll
+{
+  field ( mandatory : create )
+   Customer;
+
+  field ( readonly )
+   SingletonID,
+   CreatedBy,
+   CreatedAt,
+   LastChangedAt,
+   LocalLastChangedBy,
+   LocalLastChangedAt;
+
+  field ( readonly : update )
+   Customer;
+
+  field ( notrigger )
+   SingletonID,
+   CreatedBy,
+   CreatedAt,
+   LastChangedAt,
+   LocalLastChangedBy,
+   LocalLastChangedAt;
+
+
+  update( features : global );
+  delete( features : global );
+
+  mapping for ZARETE_DBS_T025
+  {
+    Customer = CUSTOMER;
+    CreatedBy = CREATED_BY;
+    CreatedAt = CREATED_AT;
+    LastChangedAt = LAST_CHANGED_AT;
+    LocalLastChangedBy = LOCAL_LAST_CHANGED_BY;
+    LocalLastChangedAt = LOCAL_LAST_CHANGED_AT;
+  }
+
+  association _DbsVl10cHariTutuAll { with draft; }
+
+//  validation ValidateTransportRequest on save ##NOT_ASSIGNED_TO_DETACT
+//  {
+//    create;
+//    update;
+//    delete;
+//  }
+
+}

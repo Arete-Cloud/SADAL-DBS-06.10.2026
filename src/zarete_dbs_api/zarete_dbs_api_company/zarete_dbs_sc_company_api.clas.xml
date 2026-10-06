@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_CLAS" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <VSEOCLASS>
+    <CLSNAME>ZARETE_DBS_SC_COMPANY_API</CLSNAME>
+    <LANGU>T</LANGU>
+    <DESCRIPT>Consumption model for client proxy - generated</DESCRIPT>
+    <STATE>1</STATE>
+    <UNICODE>X</UNICODE>
+   </VSEOCLASS>
+   <DESCRIPTIONS>
+    <SEOCOMPOTX>
+     <CLSNAME>ZARETE_DBS_SC_COMPANY_API</CLSNAME>
+     <CMPNAME>DEF_A_COMPANY_CODE_TYPE</CMPNAME>
+     <LANGU>T</LANGU>
+     <DESCRIPT>Define A_CompanyCodeType</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZARETE_DBS_SC_COMPANY_API</CLSNAME>
+     <CMPNAME>GCS_ENTITY_SET</CMPNAME>
+     <LANGU>T</LANGU>
+     <DESCRIPT>Internal Names of the entity sets</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZARETE_DBS_SC_COMPANY_API</CLSNAME>
+     <CMPNAME>GCS_ENTITY_TYPE</CMPNAME>
+     <LANGU>T</LANGU>
+     <DESCRIPT>Internal names for entity types</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZARETE_DBS_SC_COMPANY_API</CLSNAME>
+     <CMPNAME>MO_MODEL</CMPNAME>
+     <LANGU>T</LANGU>
+     <DESCRIPT>Model</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZARETE_DBS_SC_COMPANY_API</CLSNAME>
+     <CMPNAME>TYS_A_COMPANY_CODE_TYPE</CMPNAME>
+     <LANGU>T</LANGU>
+     <DESCRIPT>A_CompanyCodeType</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZARETE_DBS_SC_COMPANY_API</CLSNAME>
+     <CMPNAME>TYT_A_COMPANY_CODE_TYPE</CMPNAME>
+     <LANGU>T</LANGU>
+     <DESCRIPT>List of A_CompanyCodeType</DESCRIPT>
+    </SEOCOMPOTX>
+   </DESCRIPTIONS>
+   <DESCRIPTIONS_SUB>
+    <SEOSUBCOTX>
+     <CMPNAME>DEF_A_COMPANY_CODE_TYPE</CMPNAME>
+     <SCONAME>/IWBEP/CX_GATEWAY</SCONAME>
+     <LANGU>T</LANGU>
+     <DESCRIPT>Gateway Exception</DESCRIPT>
+    </SEOSUBCOTX>
+   </DESCRIPTIONS_SUB>
+  </asx:values>
+ </asx:abap>
+</abapGit>

@@ -1,0 +1,36 @@
+{
+  "formatVersion": "1",
+  "header": {
+    "description": "DBS Denkleştirme Gönderilenler Takip Tab bakımını",
+    "originalLanguage": "tr",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "serviceConfiguration": {
+    "serviceBinding": "ZUI_DBSDENKLETIRMEGNDER_O4",
+    "serviceName": "ZUI_DBSDENKLETIRMEGNDER_O4",
+    "serviceVersion": "0001",
+    "rootEntitySet": "DbsDenkleTirmeGNAll",
+    "name": "DBS Denkleştirme Gönderilenler Takip Tab",
+    "transportObject": "ZDBSDENKLETIRMEGNDERT",
+    "configurationGroup": "",
+    "skipRootEntity": true
+  },
+  "appConfiguration": {
+    "listReport": {},
+    "objectPages": [
+      {
+        "entitySet": "DbsDenkleTirmeGNAll",
+        "variantManagement": "control"
+      }
+    ],
+    "tableSettings": [
+      {
+        "entitySet": "DbsDenkleTirmeGNder",
+        "selectAll": true,
+        "rowCountMode": "auto",
+        "frozenColumnCount": 4,
+        "threshold": 10
+      }
+    ]
+  }
+}

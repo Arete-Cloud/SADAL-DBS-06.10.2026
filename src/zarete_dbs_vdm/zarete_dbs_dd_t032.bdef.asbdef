@@ -1,0 +1,49 @@
+managed implementation in class zbp_arete_dbs_dd_t032 unique;
+strict ( 2 );
+define behavior for ZARETE_DBS_DD_T032 //alias <alias_name>
+persistent table zarete_dbs_t021
+lock master
+authorization master ( global )
+etag master LocalLastChangedAt
+{
+
+  field ( readonly ) LogId,
+  CreatedBy,
+  CreatedAt,
+  LastChangedAt,
+  LocalLastChangedBy,
+  LocalLastChangedAt;
+
+  field ( numbering : managed )
+  LogId;
+
+
+  create;
+  update;
+  delete;
+
+  mapping for zarete_dbs_t021
+    {
+      LogId                  = log_id;
+      Identifier             = identifier;
+      LimitId                = limitid;
+      PartyCode              = partycode;
+      PartyTaxNumber         = partytaxnumber;
+      PartyTitle             = partytitle;
+      Limit                  = limit;
+      ActiveLimit            = activelimit;
+      PendingInvoiceCount    = pendinginvoicecount;
+      PendingInvoiceAmount   = pendinginvoiceamount;
+      GuarantedInvoiceAmount = guarantedinvoiceamount;
+      FundedExposure         = fundedexposure;
+      BankCode               = bankcode;
+      BankName               = bankname;
+      CurrencyCode           = currencycode;
+      CreatedBy              = created_by;
+      CreatedAt              = created_at;
+      LastChangedAt          = last_changed_at;
+      LocalLastChangedBy     = local_last_changed_by;
+      LocalLastChangedAt     = local_last_changed_at;
+    }
+
+}

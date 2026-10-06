@@ -1,0 +1,171 @@
+@Metadata.layer: #CUSTOMER
+@UI: {
+  headerInfo: {
+    typeName: 'SapdenGelenFaturala', 
+    typeNamePlural: 'SapdenGelenFaturalas', 
+    title: {
+      type: #STANDARD, 
+      label: 'SAPden Gelen Faturalar Tablosu', 
+      value: 'CompanyCode'
+    }
+  }
+}
+annotate view ZI_SapdenGelenFaturala with
+{
+  @UI.identification: [ {
+    position: 1 
+  } ]
+  @UI.lineItem: [ {
+    position: 1 
+  } ]
+  @UI.facet: [ {
+    id: 'ZI_SapdenGelenFaturala', 
+    purpose: #STANDARD, 
+    type: #IDENTIFICATION_REFERENCE, 
+    label: 'SAPden Gelen Faturalar Tablosu', 
+    position: 1 
+  } ]
+  CompanyCode;
+  
+  @UI.identification: [ {
+    position: 2 
+  } ]
+  @UI.lineItem: [ {
+    position: 2 
+  } ]
+  FiscalYear;
+  
+  @UI.identification: [ {
+    position: 3 
+  } ]
+  @UI.lineItem: [ {
+    position: 3 
+  } ]
+  AccountingDocument;
+  
+  @UI.identification: [ {
+    position: 4 
+  } ]
+  @UI.lineItem: [ {
+    position: 4 
+  } ]
+  AccountingDocumentItem;
+  
+  @UI.identification: [ {
+    position: 5 
+  } ]
+  @UI.lineItem: [ {
+    position: 5 
+  } ]
+  DocumentReferenceId;
+  
+  @UI.identification: [ {
+    position: 6 , 
+    label: 'DebitCreditCode'
+  } ]
+  @UI.lineItem: [ {
+    position: 6 , 
+    label: 'DebitCreditCode'
+  } ]
+  DebitCreditCode;
+  
+  @UI.identification: [ {
+    position: 7 , 
+    label: 'DocumentItemText'
+  } ]
+  @UI.lineItem: [ {
+    position: 7 , 
+    label: 'DocumentItemText'
+  } ]
+  DocumentItemText;
+  
+  @UI.identification: [ {
+    position: 8 , 
+    label: 'Customer'
+  } ]
+  @UI.lineItem: [ {
+    position: 8 , 
+    label: 'Customer'
+  } ]
+  Customer;
+  
+  @UI.identification: [ {
+    position: 9 , 
+    label: 'CustomerName'
+  } ]
+  @UI.lineItem: [ {
+    position: 9 , 
+    label: 'CustomerName'
+  } ]
+  CustomerName;
+  
+  @UI.identification: [ {
+    position: 10 , 
+    label: 'PostingDate'
+  } ]
+  @UI.lineItem: [ {
+    position: 10 , 
+    label: 'PostingDate'
+  } ]
+  PostingDate;
+  
+  @UI.identification: [ {
+    position: 11 , 
+    label: 'DocumentDate'
+  } ]
+  DocumentDate;
+  
+  @UI.identification: [ {
+    position: 12 , 
+    label: 'NetDueDate'
+  } ]
+  NetDueDate;
+  
+  @UI.identification: [ {
+    position: 13 , 
+    label: 'ValueDate'
+  } ]
+  ValueDate;
+  
+  @UI.identification: [ {
+    position: 14 , 
+    label: 'HouseBank'
+  } ]
+  HouseBank;
+  
+  @UI.identification: [ {
+    position: 15 , 
+    label: 'AccountingDocumentType'
+  } ]
+  AccountingDocumentType;
+  
+  @UI.identification: [ {
+    position: 16 , 
+    label: 'AmountInTransactionCurr'
+  } ]
+  AmountInTransactionCurr;
+  
+  @UI.identification: [ {
+    position: 17 , 
+    label: 'TransactionCurrency'
+  } ]
+  TransactionCurrency;
+  
+  @UI.identification: [ {
+    position: 18 , 
+    label: 'AssignmentReference'
+  } ]
+  AssignmentReference;
+  
+  @UI.identification: [ {
+    position: 19 , 
+    label: 'ClearingAccountingDocume'
+  } ]
+  ClearingAccountingDocume;
+  
+  @UI.identification: [ {
+    position: 20 , 
+    label: 'ClearingDocFiscalYear'
+  } ]
+  ClearingDocFiscalYear;
+}

@@ -1,0 +1,273 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_MSAG" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <T100A>
+    <ARBGB>ZARETE_DBS_MC_001</ARBGB>
+    <MASTERLANG>E</MASTERLANG>
+    <STEXT>DBS Message Class Hatalar ve Loglar</STEXT>
+   </T100A>
+   <T100>
+    <T100>
+     <SPRSL>T</SPRSL>
+     <ARBGB>ZARETE_DBS_MC_001</ARBGB>
+     <MSGNR>000</MSGNR>
+     <TEXT>&amp;amp;1 &amp;amp;2 &amp;amp;3 &amp;amp;4</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>T</SPRSL>
+     <ARBGB>ZARETE_DBS_MC_001</ARBGB>
+     <MSGNR>001</MSGNR>
+     <TEXT>Yeni bir istekte bulunmadan önce 10 saniye beklemelisiniz.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>T</SPRSL>
+     <ARBGB>ZARETE_DBS_MC_001</ARBGB>
+     <MSGNR>002</MSGNR>
+     <TEXT>Muhasebe Belgesi Oluşturulamadı</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>T</SPRSL>
+     <ARBGB>ZARETE_DBS_MC_001</ARBGB>
+     <MSGNR>003</MSGNR>
+     <TEXT>Muhasebe Belgesi Oluşturuldu</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>T</SPRSL>
+     <ARBGB>ZARETE_DBS_MC_001</ARBGB>
+     <MSGNR>004</MSGNR>
+     <TEXT>Ana Hesap Bilgisi Bulunamadı</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>T</SPRSL>
+     <ARBGB>ZARETE_DBS_MC_001</ARBGB>
+     <MSGNR>005</MSGNR>
+     <TEXT>SAP Belge Detayı Bulunamadı</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>T</SPRSL>
+     <ARBGB>ZARETE_DBS_MC_001</ARBGB>
+     <MSGNR>006</MSGNR>
+     <TEXT>Fatura Geri Alındı</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>T</SPRSL>
+     <ARBGB>ZARETE_DBS_MC_001</ARBGB>
+     <MSGNR>007</MSGNR>
+     <TEXT>Fatura Geri Alınamadı</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>T</SPRSL>
+     <ARBGB>ZARETE_DBS_MC_001</ARBGB>
+     <MSGNR>008</MSGNR>
+     <TEXT>Fatura Yaratıldı</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>T</SPRSL>
+     <ARBGB>ZARETE_DBS_MC_001</ARBGB>
+     <MSGNR>009</MSGNR>
+     <TEXT>Gönderilen Tutar Belge Tutarından Yüksek</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>T</SPRSL>
+     <ARBGB>ZARETE_DBS_MC_001</ARBGB>
+     <MSGNR>010</MSGNR>
+     <TEXT>Banka Bilgisi Bulunamadı</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>T</SPRSL>
+     <ARBGB>ZARETE_DBS_MC_001</ARBGB>
+     <MSGNR>011</MSGNR>
+     <TEXT>Vade Tarihi Güncellendi</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>T</SPRSL>
+     <ARBGB>ZARETE_DBS_MC_001</ARBGB>
+     <MSGNR>012</MSGNR>
+     <TEXT>&amp;amp;1</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>T</SPRSL>
+     <ARBGB>ZARETE_DBS_MC_001</ARBGB>
+     <MSGNR>013</MSGNR>
+     <TEXT>Vade Tarihi Geçmiş Olamaz</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>T</SPRSL>
+     <ARBGB>ZARETE_DBS_MC_001</ARBGB>
+     <MSGNR>014</MSGNR>
+     <TEXT>Fatura vadesi bugün. Gönderim yapılamaz.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>T</SPRSL>
+     <ARBGB>ZARETE_DBS_MC_001</ARBGB>
+     <MSGNR>015</MSGNR>
+     <TEXT>Vade tarihi iş günü içersininde değildir. Kontrol ediniz.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>T</SPRSL>
+     <ARBGB>ZARETE_DBS_MC_001</ARBGB>
+     <MSGNR>016</MSGNR>
+     <TEXT>Limit/Nakdi Risk Yetersiz</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>T</SPRSL>
+     <ARBGB>ZARETE_DBS_MC_001</ARBGB>
+     <MSGNR>017</MSGNR>
+     <TEXT>Denkleştirme Başarısız</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>T</SPRSL>
+     <ARBGB>ZARETE_DBS_MC_001</ARBGB>
+     <MSGNR>018</MSGNR>
+     <TEXT>Denkleştirme Başarılı</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>T</SPRSL>
+     <ARBGB>ZARETE_DBS_MC_001</ARBGB>
+     <MSGNR>019</MSGNR>
+     <TEXT>Faturanın vade tarihi 5 gün içerisinde değil</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>T</SPRSL>
+     <ARBGB>ZARETE_DBS_MC_001</ARBGB>
+     <MSGNR>020</MSGNR>
+     <TEXT>İlgili caride nakdi risk bulunmaktadır</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>T</SPRSL>
+     <ARBGB>ZARETE_DBS_MC_001</ARBGB>
+     <MSGNR>021</MSGNR>
+     <TEXT>Banka limiti yetersiz</TEXT>
+    </T100>
+   </T100>
+   <I18N_LANGS>
+    <LANGU>E</LANGU>
+   </I18N_LANGS>
+   <T100T>
+    <T100T>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZARETE_DBS_MC_001</ARBGB>
+     <STEXT>DBS Message Class Hatalar ve Loglar</STEXT>
+    </T100T>
+   </T100T>
+   <T100_TEXTS>
+    <item>
+     <SPRSL>E</SPRSL>
+     <MSGNR>000</MSGNR>
+     <TEXT>&amp;1 &amp;2 &amp;3 &amp;4</TEXT>
+    </item>
+    <item>
+     <SPRSL>E</SPRSL>
+     <MSGNR>001</MSGNR>
+     <TEXT>Yeni bir istekte bulunmadan önce 10 saniye beklemelisiniz.</TEXT>
+    </item>
+    <item>
+     <SPRSL>E</SPRSL>
+     <MSGNR>002</MSGNR>
+     <TEXT>Muhasebe Belgesi Oluşturulamadı</TEXT>
+    </item>
+    <item>
+     <SPRSL>E</SPRSL>
+     <MSGNR>003</MSGNR>
+     <TEXT>Muhasebe Belgesi Oluşturuldu</TEXT>
+    </item>
+    <item>
+     <SPRSL>E</SPRSL>
+     <MSGNR>004</MSGNR>
+     <TEXT>Ana Hesap Bilgisi Bulunamadı</TEXT>
+    </item>
+    <item>
+     <SPRSL>E</SPRSL>
+     <MSGNR>005</MSGNR>
+     <TEXT>SAP Belge Detayı Bulunamadı</TEXT>
+    </item>
+    <item>
+     <SPRSL>E</SPRSL>
+     <MSGNR>006</MSGNR>
+     <TEXT>Fatura Geri Alındı</TEXT>
+    </item>
+    <item>
+     <SPRSL>E</SPRSL>
+     <MSGNR>007</MSGNR>
+     <TEXT>Fatura Geri Alınamadı</TEXT>
+    </item>
+    <item>
+     <SPRSL>E</SPRSL>
+     <MSGNR>008</MSGNR>
+     <TEXT>Fatura Yaratıldı</TEXT>
+    </item>
+    <item>
+     <SPRSL>E</SPRSL>
+     <MSGNR>009</MSGNR>
+     <TEXT>Gönderilen Tutar Belge Tutarından Yüksek</TEXT>
+    </item>
+    <item>
+     <SPRSL>E</SPRSL>
+     <MSGNR>010</MSGNR>
+     <TEXT>Banka Bilgisi Bulunamadı</TEXT>
+    </item>
+    <item>
+     <SPRSL>E</SPRSL>
+     <MSGNR>011</MSGNR>
+     <TEXT>Vade Tarihi Güncellendi</TEXT>
+    </item>
+    <item>
+     <SPRSL>E</SPRSL>
+     <MSGNR>012</MSGNR>
+     <TEXT>&amp;1</TEXT>
+    </item>
+    <item>
+     <SPRSL>E</SPRSL>
+     <MSGNR>013</MSGNR>
+     <TEXT>Vade Tarihi Geçmiş Olamaz</TEXT>
+    </item>
+    <item>
+     <SPRSL>E</SPRSL>
+     <MSGNR>014</MSGNR>
+     <TEXT>Fatura vadesi bugün. Gönderim yapılamaz.</TEXT>
+    </item>
+    <item>
+     <SPRSL>E</SPRSL>
+     <MSGNR>015</MSGNR>
+     <TEXT>Vade tarihi iş günü içersininde değildir. Kontrol ediniz.</TEXT>
+    </item>
+    <item>
+     <SPRSL>E</SPRSL>
+     <MSGNR>016</MSGNR>
+     <TEXT>Limit/Nakdi Risk Yetersiz</TEXT>
+    </item>
+    <item>
+     <SPRSL>E</SPRSL>
+     <MSGNR>017</MSGNR>
+     <TEXT>Denkleştirme Başarısız</TEXT>
+    </item>
+    <item>
+     <SPRSL>E</SPRSL>
+     <MSGNR>018</MSGNR>
+     <TEXT>Denkleştirme Başarılı</TEXT>
+    </item>
+    <item>
+     <SPRSL>E</SPRSL>
+     <MSGNR>019</MSGNR>
+     <TEXT>Faturanın vade tarihi 5 gün içerisinde değil</TEXT>
+    </item>
+    <item>
+     <SPRSL>E</SPRSL>
+     <MSGNR>020</MSGNR>
+     <TEXT>İlgili caride nakdi risk bulunmaktadır</TEXT>
+    </item>
+    <item>
+     <SPRSL>E</SPRSL>
+     <MSGNR>021</MSGNR>
+     <TEXT>Denkleştirme için banka limiti yetersiz</TEXT>
+    </item>
+    <item>
+     <SPRSL>E</SPRSL>
+     <MSGNR>022</MSGNR>
+     <TEXT>Ödeme Belgesi Bulunamadı</TEXT>
+    </item>
+   </T100_TEXTS>
+  </asx:values>
+ </asx:abap>
+</abapGit>

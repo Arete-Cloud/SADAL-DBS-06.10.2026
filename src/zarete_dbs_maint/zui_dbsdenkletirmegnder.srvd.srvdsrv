@@ -1,0 +1,5 @@
+@ObjectModel.leadingEntity.name: 'ZI_DbsDenkleTirmeGNder_S'
+define service ZUI_DBSDENKLETIRMEGNDER {
+  expose ZI_DBSDENKLETIRMEGNDER_S as DbsDenkleTirmeGNAll;
+  expose ZI_DBSDENKLETIRMEGNDER as DbsDenkleTirmeGNder;
+}

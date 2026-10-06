@@ -1,0 +1,5 @@
+@ObjectModel.leadingEntity.name: 'ZI_FinteoGelFaturaTabl_S'
+define service ZUI_FINTEOGELFATURATABL {
+  expose ZI_FINTEOGELFATURATABL_S as FinteoGelFaturaTAll;
+  expose ZI_FINTEOGELFATURATABL as FinteoGelFaturaTabl;
+}

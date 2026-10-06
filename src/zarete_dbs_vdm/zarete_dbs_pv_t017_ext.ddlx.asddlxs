@@ -1,0 +1,72 @@
+@Metadata.layer: #CORE
+
+@UI: {
+  headerInfo: {
+    typeName: 'A_SAPFaturaları',
+    typeNamePlural: 'A_SAPFaturaları'
+  }
+}
+annotate entity ZARETE_DBS_DD_T017 with
+{
+  @UI.lineItem: [ { position: 10, importance: #MEDIUM, label: 'Company Code' } ]
+  @EndUserText.label: 'Company Code'
+  CompanyCode;
+  @UI.lineItem: [ { position: 20, importance: #MEDIUM, label: 'Fiscal Year' } ]
+  @EndUserText.label: 'Fiscal Year'
+  FiscalYear;
+  @UI.lineItem: [ { position: 30, importance: #MEDIUM, label: 'Accounting Document' } ]
+  @EndUserText.label: 'Accounting Document'
+  AccountingDocument;
+  @UI.lineItem: [ { position: 40, importance: #MEDIUM, label: 'Accounting Document Item' } ]
+  @EndUserText.label: 'Accounting Document Item'
+  AccountingDocumentItem;
+  @UI.lineItem: [ { position: 50, importance: #MEDIUM, label: 'Document Reference ID' } ]
+  @EndUserText.label: 'Document Reference ID'
+  DocumentReferenceId;
+  @UI.lineItem: [ { position: 60, importance: #MEDIUM, label: 'Debit Credit Code' } ]
+  @EndUserText.label: 'Debit Credit Code'
+  DebitCreditCode;
+  @UI.lineItem: [ { position: 70, importance: #MEDIUM, label: 'Document Item Text' } ]
+  @EndUserText.label: 'Document Item Text'
+  DocumentItemText;
+  @UI.lineItem: [ { position: 80, importance: #MEDIUM, label: 'Customer' } ]
+  @EndUserText.label: 'Customer'
+  Customer;
+  @UI.lineItem: [ { position: 90, importance: #MEDIUM, label: 'Customer Name' } ]
+  @EndUserText.label: 'Customer Name'
+  CustomerName;
+  @UI.lineItem: [ { position: 100, importance: #MEDIUM, label: 'Posting Date' } ]
+  @EndUserText.label: 'Posting Date'
+  PostingDate;
+  @UI.lineItem: [ { position: 110, importance: #MEDIUM, label: 'Document Date' } ]
+  @EndUserText.label: 'Document Date'
+  DocumentDate;
+  @UI.lineItem: [ { position: 120, importance: #MEDIUM, label: 'Net Due Date' } ]
+  @EndUserText.label: 'Net Due Date'
+  NetDueDate;
+  @UI.lineItem: [ { position: 130, importance: #MEDIUM, label: 'Value Date' } ]
+  @EndUserText.label: 'Value Date'
+  ValueDate;
+  @UI.lineItem: [ { position: 140, importance: #MEDIUM, label: 'House Bank' } ]
+  @EndUserText.label: 'House Bank'
+  HouseBank;
+  @UI.lineItem: [ { position: 150, importance: #MEDIUM, label: 'Accounting Document Type' } ]
+  @EndUserText.label: 'Accounting Document Type'
+  AccountingDocumentType;
+  @UI.lineItem: [ { position: 160, importance: #MEDIUM, label: 'Amount In Transaction Curr' } ]
+  @EndUserText.label: 'Amount In Transaction Curr'
+  AmountInTransactionCurr;
+  @UI.lineItem: [ { position: 170, importance: #MEDIUM, label: 'Transaction Currency' } ]
+  @EndUserText.label: 'Transaction Currency'
+  TransactionCurrency;
+  @UI.lineItem: [ { position: 180, importance: #MEDIUM, label: 'Assignment Reference' } ]
+  @EndUserText.label: 'Assignment Reference'
+  AssignmentReference;
+  @UI.lineItem: [ { position: 190, importance: #MEDIUM, label: 'ClearingAccountingDocume' } ]
+  @EndUserText.label: 'ClearingAccountingDocume'
+  ClearingAccountingDocume;
+  @UI.lineItem: [ { position: 200, importance: #MEDIUM, label: 'ClearingDocFiscalYear' } ]
+  @EndUserText.label: 'ClearingDocFiscalYear'
+  ClearingDocFiscalYear;
+
+}

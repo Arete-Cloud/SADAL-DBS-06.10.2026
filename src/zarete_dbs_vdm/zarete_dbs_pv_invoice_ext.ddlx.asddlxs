@@ -1,0 +1,173 @@
+@Metadata.layer: #CORE
+
+annotate entity ZARETE_DBS_DD_INVOICE_001 with
+{
+  @UI.facet: [{ id: 'Invoices', label: 'Invoices', type : #IDENTIFICATION_REFERENCE, purpose : #STANDARD, position: 10 }]
+
+  @UI:{ selectionField:[{position:10}], lineItem:[
+      {position:10,type:#FOR_ACTION ,dataAction:'send_invoice',label:'Fatura Gönder',invocationGrouping:#CHANGE_SET},
+      {position:20,type:#FOR_ACTION ,dataAction:'delete_invoice',label:'Faturayı Geri Çek',invocationGrouping:#CHANGE_SET},
+      {position:30,type:#FOR_ACTION ,dataAction:'accounting_document',label:'Muhasebe Belgesi Oluştur',invocationGrouping:#CHANGE_SET},
+      {position:40,type:#FOR_ACTION ,dataAction:'clearing_all',label:'Tümünü Denkleştirme',invocationGrouping:#CHANGE_SET}
+
+      ]}
+
+  @UI: {lineItem: [{importance: #MEDIUM }], identification: [{importance: #MEDIUM  }]}
+  @EndUserText.label: 'ID'
+  Id;
+
+  @UI: {lineItem: [{importance: #MEDIUM }], identification: [{importance: #MEDIUM  }]}
+  @EndUserText.label: 'Fatura No'
+  InvoiceNumber;
+
+  @UI: {lineItem: [{importance: #MEDIUM }], identification: [{importance: #MEDIUM  }]}
+  @EndUserText.label: 'Kısmi Fatura No'
+  PartialInvoiceNumber;
+
+  @UI: {lineItem: [{importance: #MEDIUM }], identification: [{importance: #MEDIUM  }]}
+  @UI.selectionField: [{ position: 30 }]
+  @Consumption.valueHelpDefinition: [{ entity: {name: 'ZARETE_DBS_DD_T031', element: 'AccountingDocument'} }]
+  @EndUserText.label: 'SAP Belge No'
+  AccountingDocument;
+
+  @UI: {lineItem: [{importance: #MEDIUM }], identification: [{importance: #MEDIUM  }]}
+  @EndUserText.label: 'Fatura Belge No'
+  InvoiceAccountingDocument;
+
+  @UI: {lineItem: [{importance: #MEDIUM }], identification: [{importance: #MEDIUM  }]}
+  @UI.selectionField: [{ position: 10 }]
+  //  @Consumption.valueHelpDefinition: [{ entity: {name: 'ZARETE_DBS_DD_T018', element: 'BusinessPartner'} }]
+  @Consumption.valueHelpDefinition: [{entity: {name: 'ZARETE_DBS_DD_BP_001', element: 'business_partner' } }]
+  @EndUserText.label: 'Müşteri(Debtor)'
+  Customer;
+
+  @UI: {lineItem: [{importance: #MEDIUM }], identification: [{importance: #MEDIUM  }]}
+  @EndUserText.label: 'Müşteri Adı'
+  CustomerName;
+  
+  @UI: {lineItem: [{importance: #MEDIUM }], identification: [{importance: #MEDIUM  }]}
+  @UI.selectionField: [{ position: 60 }]
+  @EndUserText.label: 'Mali Yıl'
+  FiscalYear;
+  
+  @UI: {lineItem: [{importance: #MEDIUM }], identification: [{importance: #MEDIUM  }]}
+  @EndUserText.label: 'Belge Tarihi'
+  DocumentDate;
+
+  @UI: {lineItem: [{importance: #MEDIUM }], identification: [{importance: #MEDIUM  }]}
+  @EndUserText.label: 'Kayıt Tarihi'
+  PostingDate;
+
+  @UI: {lineItem: [{importance: #MEDIUM }], identification: [{importance: #MEDIUM  }]}
+  @UI.selectionField: [{ position: 50 }]
+  @EndUserText.label: 'Vade Tarihi'
+  DueDate;
+
+  @UI: {lineItem: [{importance: #MEDIUM }], identification: [{importance: #MEDIUM  }]}
+  @EndUserText.label: 'Bankaya Gönderim Tarihi'
+  SendDate;
+
+  @UI: {lineItem: [{importance: #MEDIUM }], identification: [{importance: #MEDIUM  }]}
+  @EndUserText.label: 'Ödeme Tarihi'
+  LastPaymentDate;
+
+  @UI: {lineItem: [{importance: #MEDIUM }], identification: [{importance: #MEDIUM  }]}
+  @EndUserText.label: 'Tutar'
+  Amount;
+
+  @UI: {lineItem: [{importance: #MEDIUM }], identification: [{importance: #MEDIUM  }]}
+  @EndUserText.label: 'Para Birimi'
+  @UI.hidden: true
+  Currency;
+
+  @UI: {lineItem: [{importance: #MEDIUM }], identification: [{importance: #MEDIUM  }]}
+  @EndUserText.label: 'Metin'
+  DocumentText;
+
+  @UI: {lineItem: [{importance: #MEDIUM }], identification: [{importance: #MEDIUM  }]}
+  @UI.selectionField: [{ position: 20 }]
+  @Consumption.valueHelpDefinition: [{ entity: {name: 'ZARETE_DBS_DD_T019', element: 'BankCode'}}]
+  @EndUserText.label: 'Banka'
+  HouseBank;
+
+  @UI: {lineItem: [{importance: #MEDIUM }], identification: [{importance: #MEDIUM  }]}
+  @EndUserText.label: 'Gönderilen Tutar'
+  SendAmount;
+
+  @UI: {lineItem: [{importance: #MEDIUM }], identification: [{importance: #MEDIUM  }]}
+  @EndUserText.label: 'Kalan Tutar'
+  RemainingAmount;
+
+  @UI: {lineItem: [{importance: #MEDIUM }], identification: [{importance: #MEDIUM  }]}
+  @EndUserText.label: 'Denkleştirilen Tutar'
+  UsedAmountForClearing;
+
+  @UI: {lineItem: [{importance: #MEDIUM }], identification: [{importance: #MEDIUM  }]}
+  @EndUserText.label: 'Durum'
+  FinteoStatusCodeText;
+
+  @UI: {lineItem: [{importance: #MEDIUM }], identification: [{importance: #MEDIUM  }]}
+  @UI.selectionField: [{ position: 40 }]
+  @Consumption.valueHelpDefinition: [{ entity: {name: 'ZARETE_DBS_DD_T011', element: 'FinteoStatusDescText'}}]
+  @EndUserText.label: 'Banka Durum Detayı'
+  FinteoStatusDescText;
+
+  @UI: {lineItem: [{importance: #MEDIUM }], identification: [{importance: #MEDIUM  }]}
+  @EndUserText.label: 'Sap Durum Detayı'
+  SapStatusCodeText;
+
+  @UI: {lineItem: [{importance: #MEDIUM }], identification: [{importance: #MEDIUM  }]}
+  @EndUserText.label: 'Aksiyon Kodu'
+  ActionCode;
+
+  @UI: {lineItem: [{importance: #MEDIUM }], identification: [{importance: #MEDIUM  }]}
+  @EndUserText.label: 'Aksiyon Tanımı'
+  ActionDefinition;
+
+  @UI: {lineItem: [{importance: #MEDIUM }], identification: [{importance: #MEDIUM  }]}
+  @EndUserText.label: 'DBS Invoice ID'
+  DbsInvoiceId;
+
+  @UI: {lineItem: [{importance: #MEDIUM }], identification: [{importance: #MEDIUM  }]}
+  @EndUserText.label: 'Banka Durum Kodu'
+  FinteoStatusCode;
+
+  @UI: {lineItem: [{importance: #MEDIUM }], identification: [{importance: #MEDIUM  }]}
+  @EndUserText.label: 'Banka Durum Detayı Kodu'
+  FinteoStatusDescription;
+
+  @UI: {lineItem: [{importance: #MEDIUM }], identification: [{importance: #MEDIUM  }]}
+  @Consumption.valueHelpDefinition: [{ entity: { name: 'ZARETE_DBS_DD_T010', element: 'SapStatusCode' } }]
+  @EndUserText.label: 'Sap Durum Detayı Kodu'
+  SapStatusCode;
+
+  @UI: {lineItem: [{importance: #MEDIUM }], identification: [{importance: #MEDIUM  }]}
+  @EndUserText.label: 'Durum Ikonu'
+  StatusIcon;
+
+  @UI: {lineItem: [{importance: #MEDIUM }], identification: [{importance: #MEDIUM  }]}
+  @EndUserText.label: 'Aynı Fat.No ile Gönderilmiş Toplam Tutar'
+  TotalAmount;
+
+  @UI: {lineItem: [{importance: #MEDIUM }], identification: [{importance: #MEDIUM  }]}
+  @EndUserText.label: 'Log'
+  ShowLog;
+
+  @UI: {lineItem: [{importance: #MEDIUM }], identification: [{importance: #MEDIUM  }]}
+  @EndUserText.label: 'Denkleştir'
+  Clearing;
+
+  @UI: {lineItem: [{importance: #MEDIUM }], identification: [{importance: #MEDIUM  }]}
+  @EndUserText.label: 'Nakdi Risk'
+  FundedExposure;
+
+  @UI: {lineItem: [{importance: #MEDIUM }], identification: [{importance: #MEDIUM  }]}
+  @UI.selectionField: [{ position: 30 }]
+  //  @Consumption.valueHelpDefinition: [{ entity: {name: 'ZARETE_DBS_DD_T034', element: 'ClearingDocument'} }]
+  @EndUserText.label: 'Denkleştirme Belge No'
+  ClearingDocument;
+
+  @EndUserText.label: 'Ödeme Belgesi Var Mı?'
+  Odeme;
+
+}

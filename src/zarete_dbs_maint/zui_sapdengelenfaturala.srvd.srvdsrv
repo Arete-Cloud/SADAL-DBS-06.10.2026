@@ -1,0 +1,5 @@
+@ObjectModel.leadingEntity.name: 'ZI_SapdenGelenFaturala_S'
+define service ZUI_SAPDENGELENFATURALA {
+  expose ZI_SAPDENGELENFATURALA_S as SapdenGelenFaturAll;
+  expose ZI_SAPDENGELENFATURALA as SapdenGelenFaturala;
+}

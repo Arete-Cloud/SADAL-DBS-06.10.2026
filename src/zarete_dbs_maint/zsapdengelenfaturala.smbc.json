@@ -1,0 +1,36 @@
+{
+  "formatVersion": "1",
+  "header": {
+    "description": "SAPden Gelen Faturalar Tablosu bakımını yap",
+    "originalLanguage": "tr",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "serviceConfiguration": {
+    "serviceBinding": "ZUI_SAPDENGELENFATURALA_O4",
+    "serviceName": "ZUI_SAPDENGELENFATURALA_O4",
+    "serviceVersion": "0001",
+    "rootEntitySet": "SapdenGelenFaturAll",
+    "name": "SAPden Gelen Faturalar Tablosu",
+    "transportObject": "ZSAPDENGELENFATURALAT",
+    "configurationGroup": "",
+    "skipRootEntity": true
+  },
+  "appConfiguration": {
+    "listReport": {},
+    "objectPages": [
+      {
+        "entitySet": "SapdenGelenFaturAll",
+        "variantManagement": "control"
+      }
+    ],
+    "tableSettings": [
+      {
+        "entitySet": "SapdenGelenFaturala",
+        "selectAll": true,
+        "rowCountMode": "auto",
+        "frozenColumnCount": 5,
+        "threshold": 10
+      }
+    ]
+  }
+}

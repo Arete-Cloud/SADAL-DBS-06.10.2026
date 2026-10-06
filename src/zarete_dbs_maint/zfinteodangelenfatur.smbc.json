@@ -1,0 +1,36 @@
+{
+  "formatVersion": "1",
+  "header": {
+    "description": "Finteodan Gelen Faturalar Tablosu bakımını yap",
+    "originalLanguage": "tr",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "serviceConfiguration": {
+    "serviceBinding": "ZUI_FINTEODANGELENFATUR_O4",
+    "serviceName": "ZUI_FINTEODANGELENFATUR_O4",
+    "serviceVersion": "0001",
+    "rootEntitySet": "FinteodanGelenFaAll",
+    "name": "Finteodan Gelen Faturalar Tablosu",
+    "transportObject": "ZFINTEODANGELENFATURT",
+    "configurationGroup": "",
+    "skipRootEntity": true
+  },
+  "appConfiguration": {
+    "listReport": {},
+    "objectPages": [
+      {
+        "entitySet": "FinteodanGelenFaAll",
+        "variantManagement": "control"
+      }
+    ],
+    "tableSettings": [
+      {
+        "entitySet": "FinteodanGelenFatur",
+        "selectAll": true,
+        "rowCountMode": "auto",
+        "frozenColumnCount": 2,
+        "threshold": 10
+      }
+    ]
+  }
+}

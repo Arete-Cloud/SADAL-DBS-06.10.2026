@@ -1,0 +1,36 @@
+{
+  "formatVersion": "1",
+  "header": {
+    "description": "Finteo Gel_Fatura Tablosu bakımını yap",
+    "originalLanguage": "tr",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "serviceConfiguration": {
+    "serviceBinding": "ZUI_FINTEOGELFATURATABL_O4",
+    "serviceName": "ZUI_FINTEOGELFATURATABL_O4",
+    "serviceVersion": "0001",
+    "rootEntitySet": "FinteoGelFaturaTAll",
+    "name": "Finteo Gel_Fatura Tablosu",
+    "transportObject": "ZFINTEOGELFATURATABLT",
+    "configurationGroup": "",
+    "skipRootEntity": true
+  },
+  "appConfiguration": {
+    "listReport": {},
+    "objectPages": [
+      {
+        "entitySet": "FinteoGelFaturaTAll",
+        "variantManagement": "control"
+      }
+    ],
+    "tableSettings": [
+      {
+        "entitySet": "FinteoGelFaturaTabl",
+        "selectAll": true,
+        "rowCountMode": "auto",
+        "frozenColumnCount": 2,
+        "threshold": 20
+      }
+    ]
+  }
+}

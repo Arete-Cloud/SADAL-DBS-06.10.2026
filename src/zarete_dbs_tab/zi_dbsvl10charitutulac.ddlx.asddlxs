@@ -1,0 +1,29 @@
+@Metadata.layer: #CUSTOMER
+@UI: {
+  headerInfo: {
+    typeName: 'DbsVl10cHariTutulac', 
+    typeNamePlural: 'DbsVl10cHariTutulacs', 
+    title: {
+      type: #STANDARD, 
+      label: 'DBS-VL10C Hariç Tutulacak Cariler', 
+      value: 'Customer'
+    }
+  }
+}
+annotate view ZI_DbsVl10cHariTutulac with
+{
+  @UI.identification: [ {
+    position: 1 
+  } ]
+  @UI.lineItem: [ {
+    position: 1 
+  } ]
+  @UI.facet: [ {
+    id: 'ZI_DbsVl10cHariTutulac', 
+    purpose: #STANDARD, 
+    type: #IDENTIFICATION_REFERENCE, 
+    label: 'DBS-VL10C Hariç Tutulacak Cariler', 
+    position: 1 
+  } ]
+  Customer;
+}

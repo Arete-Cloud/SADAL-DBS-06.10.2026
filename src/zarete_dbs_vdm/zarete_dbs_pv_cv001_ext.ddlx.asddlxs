@@ -1,0 +1,48 @@
+@Metadata.layer: #CORE
+annotate view ZARETE_DBS_PV_CV001 with
+{
+  @UI.facet   : [
+     {
+       id: 'Limit',
+       label   : 'Limit',
+       type    : #IDENTIFICATION_REFERENCE,
+       purpose : #STANDARD,
+       position: 10
+     }
+   ]
+
+  @UI:{
+     selectionField:[{position:10}],
+    lineItem:[
+     {position:10,type:#FOR_ACTION ,dataAction:'Musteri_Ekle',label:'Müşteri Ekle',invocationGrouping:#CHANGE_SET}
+     ] }
+  @UI: {lineItem: [{importance: #HIGH }], identification: [{importance: #MEDIUM  }]}
+  ////  @UI.lineItem: [ { position: 20 , importance: #MEDIUM, label: 'Müşteri No' } ]
+  @EndUserText.label: 'Müşteri No'
+  PartyTaxNumber;
+  //  @UI.lineItem: [ { position: 20 , importance: #MEDIUM, label: 'Müşteri Adı' } ]
+  @UI: {lineItem: [{importance: #MEDIUM }], identification: [{importance: #MEDIUM  }]}
+  @EndUserText.label: 'Müşteri Adı'
+  PartyTitle;
+  //  @UI.lineItem: [ { position: 30 , importance: #MEDIUM, label: 'Banka' } ]
+  @UI: {lineItem: [{importance: #MEDIUM }], identification: [{importance: #MEDIUM  }]}
+  @UI.selectionField: [ { position: 20 } ]
+  @EndUserText.label: 'Banka'
+  Bankname;
+  //  @UI.lineItem: [ { position: 40 , importance: #MEDIUM, label: 'Toplam Limit' } ]
+  @UI: {lineItem: [{importance: #MEDIUM }], identification: [{importance: #MEDIUM  }]}
+  @EndUserText.label: 'Toplam Limit'
+  Limit;
+  //  @UI.lineItem: [ { position: 50 , importance: #MEDIUM, label: 'Kalan Limit' } ]
+  @UI: {lineItem: [{importance: #MEDIUM }], identification: [{importance: #MEDIUM  }]}
+  @EndUserText.label: 'Kalan Limit'
+  Activelimit;
+  //  @UI.lineItem: [ { position: 60 , importance: #MEDIUM, label: 'Kullanılan Limit' } ]
+  @UI: {lineItem: [{importance: #MEDIUM }], identification: [{importance: #MEDIUM  }]}
+  @EndUserText.label: 'Kullanılan Limit'
+  Kullanilanlimit;
+  //  @UI.lineItem: [ { position: 70 , importance: #MEDIUM, label: 'Bekleyen Fatura Tutarı' } ]
+  @UI: {lineItem: [{importance: #MEDIUM }], identification: [{importance: #MEDIUM  }]}
+  @EndUserText.label: 'Bekleyen Fatura Tutarı'
+  Pendinginvoiceamount;
+}

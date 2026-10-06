@@ -1,0 +1,72 @@
+managed with additional save implementation in class ZBP_I_DBSBELGETRLERIBAKMT_S unique;
+strict ( 2 );
+with draft;
+define behavior for ZI_DbsBelgeTRleriBakMT_S alias DbsBelgeTRleriBaAll
+draft table ZARETE_DBS_T7_S
+with unmanaged save
+lock master total etag LastChangedAtMax
+authorization master( global )
+{
+  field ( readonly )
+   SingletonID;
+
+  field ( notrigger )
+   SingletonID,
+   LastChangedAtMax;
+
+
+  update;
+  internal create;
+  internal delete;
+
+  draft action ( features : instance ) Edit;
+  draft action Activate optimized;
+  draft action Discard;
+  draft action Resume;
+  draft determine action Prepare {
+    validation DbsBelgeTRleriBakMT ~ ValidateDataConsistency;
+  }
+
+  association _DbsBelgeTRleriBakMT { create ( features : instance ); with draft; }
+
+}
+
+define behavior for ZI_DbsBelgeTRleriBakMT alias DbsBelgeTRleriBakMT ##UNMAPPED_FIELD[SingletonID]
+persistent table ZARETE_DBS_T026
+draft table ZARETE_DBS_T7_D
+lock dependent by _DbsBelgeTRleriBaAll
+authorization dependent by _DbsBelgeTRleriBaAll
+{
+  field ( mandatory : create )
+   Accountingdocumenttype,
+   Debitcreditcode;
+
+  field ( readonly )
+   SingletonID;
+
+  field ( readonly : update )
+   Accountingdocumenttype,
+   Debitcreditcode;
+
+  field ( notrigger )
+   SingletonID;
+
+
+  update( features : global );
+  delete( features : global );
+
+  mapping for ZARETE_DBS_T026
+  {
+    Accountingdocumenttype = ACCOUNTINGDOCUMENTTYPE;
+    Debitcreditcode = DEBITCREDITCODE;
+  }
+
+  association _DbsBelgeTRleriBaAll { with draft; }
+
+  validation ValidateDataConsistency on save
+  {
+    create;
+    update;
+  }
+
+}

@@ -1,0 +1,105 @@
+managed implementation in class ZBP_I_DBSDENKLETIRMEGNDER_S unique;
+strict;
+with draft;
+define behavior for ZI_DbsDenkleTirmeGNder_S alias DbsDenkleTirmeGNAll
+draft table zarete_dbs_t3_s
+with unmanaged save
+lock master total etag LastChangedAtMax
+authorization master ( global )
+{
+  field ( readonly )
+  SingletonID;
+
+  field ( notrigger )
+  SingletonID,
+  LastChangedAtMax;
+
+
+  update;
+  internal create;
+  internal delete;
+
+  draft action ( features : instance ) Edit;
+  draft action Activate optimized;
+  draft action Discard;
+  draft action Resume;
+  draft determine action Prepare;
+
+  association _DbsDenkleTirmeGNder { create ( features : instance ); with draft; }
+
+}
+
+define behavior for ZI_DbsDenkleTirmeGNder alias DbsDenkleTirmeGNder ##UNMAPPED_FIELD
+persistent table zarete_dbs_t024
+draft table zarete_dbs_t3_d
+etag master LocalLastChangedAt
+lock dependent by _DbsDenkleTirmeGNAll
+authorization dependent by _DbsDenkleTirmeGNAll
+{
+  field ( mandatory : create )
+  Uuid,
+  InvoiceNumber,
+  AccountingDocument,
+  AccountingDocumentItem;
+
+  field ( readonly )
+  SingletonID,
+  CreatedBy,
+  CreatedAt,
+  LastChangedAt,
+  LocalLastChangedBy,
+  LocalLastChangedAt;
+
+  field ( readonly : update )
+  Uuid,
+  InvoiceNumber,
+  AccountingDocument,
+  AccountingDocumentItem;
+
+  field ( notrigger )
+  SingletonID,
+  CreatedBy,
+  CreatedAt,
+  LastChangedAt,
+  LocalLastChangedBy,
+  LocalLastChangedAt;
+
+
+  update ( features : global );
+  delete ( features : global );
+
+  mapping for zarete_dbs_t024
+    {
+      Uuid                    = UUID;
+      InvoiceNumber           = INVOICE_NUMBER;
+      AccountingDocument      = ACCOUNTING_DOCUMENT;
+      AccountingDocumentItem  = ACCOUNTING_DOCUMENT_ITEM;
+      InvoiceAccDoc           = INVOICE_ACC_DOC;
+      InvoiceAccDocItem       = INVOICE_ACC_DOC_ITEM;
+      ItemUuid                = ITEM_UUID;
+      PartialInvoiceNumber    = PARTIAL_INVOICE_NUMBER;
+      Id                      = ID;
+      Customer                = CUSTOMER;
+      InvoiceAmount           = INVOICE_AMOUNT;
+      ClearingDocAmount       = CLEARING_DOC_AMOUNT;
+      UsedAmount              = USED_AMOUNT;
+      RemainingAmount         = REMAINING_AMOUNT;
+      Currency                = CURRENCY;
+      CreatedClearingDocument = CREATED_CLEARING_DOCUMENT;
+      ClearingCompanyCode     = CLEARING_COMPANY_CODE;
+      ClearingFiscalYear      = CLEARING_FISCAL_YEAR;
+      Message                 = MESSAGE;
+      Status                  = STATUS;
+      ResponseDate            = RESPONSE_DATE;
+      ResponseTime            = RESPONSE_TIME;
+      Reverse                 = REVERSE;
+      CreatedBy               = CREATED_BY;
+      CreatedAt               = CREATED_AT;
+      LastChangedAt           = LAST_CHANGED_AT;
+      LocalLastChangedBy      = LOCAL_LAST_CHANGED_BY;
+      LocalLastChangedAt      = LOCAL_LAST_CHANGED_AT;
+    }
+
+  association _DbsDenkleTirmeGNAll { with draft; }
+
+}

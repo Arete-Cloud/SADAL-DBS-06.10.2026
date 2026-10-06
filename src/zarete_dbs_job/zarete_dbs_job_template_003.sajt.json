@@ -1,0 +1,27 @@
+{
+  "formatVersion": "1",
+  "header": {
+    "description": "DBS Denkleştirme Job Template",
+    "originalLanguage": "tr",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "catalogName": "ZARETE_DBS_JOB_CATALOG_003"
+  },
+  "parameters": {
+    "singleValueParameters": [
+      {
+        "name": "P_BELNR",
+        "value": ""
+      },
+      {
+        "name": "P_BUKRS",
+        "value": ""
+      },
+      {
+        "name": "P_GJAHR",
+        "value": ""
+      }
+    ]
+  }
+}

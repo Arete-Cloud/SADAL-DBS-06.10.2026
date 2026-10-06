@@ -1,0 +1,200 @@
+@Metadata.layer: #CUSTOMER
+@UI: {
+  headerInfo: {
+    typeName: 'Finteo Faturaları Tablosu', 
+    typeNamePlural: 'Finteo Faturaları Tablosu', 
+    title: {
+      type: #STANDARD, 
+      value: 'Identifier'
+    }
+  }
+}
+annotate view ZI_FinteoFaturalarTabl with
+{
+  @UI.identification: [ {
+    position: 1 
+  } ]
+  @UI.lineItem: [ {
+    position: 1 
+  } ]
+  @UI.facet: [ {
+    id: 'FinteoFaturalarTabl', 
+    purpose: #STANDARD, 
+    type: #IDENTIFICATION_REFERENCE, 
+    label: 'Finteo Faturaları Tablosu', 
+    position: 1 
+  } ]
+  Identifier;
+  
+  @UI.identification: [ {
+    position: 2 
+  } ]
+  @UI.lineItem: [ {
+    position: 2 
+  } ]
+  DbsInvoiceId;
+  
+  @UI.identification: [ {
+    position: 3 , 
+    label: 'Id'
+  } ]
+  @UI.lineItem: [ {
+    position: 3 , 
+    label: 'Id'
+  } ]
+  Id;
+  
+  @UI.identification: [ {
+    position: 4 , 
+    label: 'Amount'
+  } ]
+  @UI.lineItem: [ {
+    position: 4 , 
+    label: 'Amount'
+  } ]
+  Amount;
+  
+  @UI.identification: [ {
+    position: 5 , 
+    label: 'DeletedAmount'
+  } ]
+  @UI.lineItem: [ {
+    position: 5 , 
+    label: 'DeletedAmount'
+  } ]
+  DeletedAmount;
+  
+  @UI.identification: [ {
+    position: 6 , 
+    label: 'CurrencyCode'
+  } ]
+  @UI.lineItem: [ {
+    position: 6 , 
+    label: 'CurrencyCode'
+  } ]
+  CurrencyCode;
+  
+  @UI.identification: [ {
+    position: 7 , 
+    label: 'DueDate'
+  } ]
+  @UI.lineItem: [ {
+    position: 7 , 
+    label: 'DueDate'
+  } ]
+  DueDate;
+  
+  @UI.identification: [ {
+    position: 8 , 
+    label: 'SendDate'
+  } ]
+  @UI.lineItem: [ {
+    position: 8 , 
+    label: 'SendDate'
+  } ]
+  SendDate;
+  
+  @UI.identification: [ {
+    position: 9 , 
+    label: 'InvoiceNumber'
+  } ]
+  @UI.lineItem: [ {
+    position: 9 , 
+    label: 'InvoiceNumber'
+  } ]
+  InvoiceNumber;
+  
+  @UI.identification: [ {
+    position: 10 , 
+    label: 'PartialInvoiceNumber'
+  } ]
+  @UI.lineItem: [ {
+    position: 10 , 
+    label: 'PartialInvoiceNumber'
+  } ]
+  PartialInvoiceNumber;
+  
+  @UI.identification: [ {
+    position: 11 , 
+    label: 'InvoiceAmountDue'
+  } ]
+  InvoiceAmountDue;
+  
+  @UI.identification: [ {
+    position: 12 , 
+    label: 'LastPaymentDate'
+  } ]
+  LastPaymentDate;
+  
+  @UI.identification: [ {
+    position: 13 , 
+    label: 'PartialGuaranteedAmount'
+  } ]
+  PartialGuaranteedAmount;
+  
+  @UI.identification: [ {
+    position: 14 , 
+    label: 'AmountRemainingBeforePaymen'
+  } ]
+  AmountRemainingBeforePaymen;
+  
+  @UI.identification: [ {
+    position: 15 , 
+    label: 'PaymentDescription'
+  } ]
+  PaymentDescription;
+  
+  @UI.identification: [ {
+    position: 16 , 
+    label: 'StatusCode'
+  } ]
+  StatusCode;
+  
+  @UI.identification: [ {
+    position: 17 , 
+    label: 'StatusDescription'
+  } ]
+  StatusDescription;
+  
+  @UI.identification: [ {
+    position: 18 , 
+    label: 'TransactionDate'
+  } ]
+  TransactionDate;
+  
+  @UI.identification: [ {
+    position: 19 , 
+    label: 'DbsAccountId'
+  } ]
+  DbsAccountId;
+  
+  @UI.identification: [ {
+    position: 20 , 
+    label: 'PartyCode'
+  } ]
+  PartyCode;
+  
+  @UI.identification: [ {
+    position: 21 , 
+    label: 'PartyTitle'
+  } ]
+  PartyTitle;
+  
+  @UI.identification: [ {
+    position: 22 , 
+    label: 'PartyTaxNumber'
+  } ]
+  PartyTaxNumber;
+  
+  @UI.identification: [ {
+    position: 23 , 
+    label: 'BankCode'
+  } ]
+  BankCode;
+  
+  @UI.identification: [ {
+    position: 24 , 
+    label: 'BankName'
+  } ]
+  BankName;
+}

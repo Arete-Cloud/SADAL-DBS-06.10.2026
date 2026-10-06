@@ -1,0 +1,21 @@
+@EndUserText.label: 'DBS Servisleri'
+define service ZARETE_DBS_SRV_V4 {
+  expose ZARETE_DBS_DD_BANK_001;
+  expose ZARETE_DBS_DD_BP_001;
+  expose ZARETE_DBS_DD_COMPANY_001;
+  expose ZARETE_DBS_DD_DOC_READ_001;
+  expose ZARETE_DBS_DD_GL_ACCOUNT_001;
+  expose ZARETE_DBS_DD_HOUSE_BANK_001;
+  expose ZARETE_DBS_DD_FINTEO_LMT_001;
+  expose ZARETE_DBS_DD_INVOICE_001;
+  expose ZARETE_DBS_PV_CV001;
+  expose ZARETE_DBS_DD_T013;
+  expose ZARETE_DBS_PV_T019;
+  expose ZARETE_DBS_DD_T019;
+  expose ZARETE_DBS_DD_T033;
+  expose ZARETE_DBS_PV_T034;
+  expose ZARETE_DBS_DD_T035;
+  expose ZARETE_DBS_DD_INVOICE_002;
+  expose ZARETE_DBS_DD_T043;
+  expose ZARETE_DBS_DD_T055;
+}

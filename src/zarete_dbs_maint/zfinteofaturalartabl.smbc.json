@@ -1,0 +1,36 @@
+{
+  "formatVersion": "1",
+  "header": {
+    "description": "Finteo Faturaları Tablosu bakımını yap",
+    "originalLanguage": "tr",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "serviceConfiguration": {
+    "serviceBinding": "ZUI_FINTEOFATURALARTABL_O4",
+    "serviceName": "ZUI_FINTEOFATURALARTABL_O4",
+    "serviceVersion": "0001",
+    "rootEntitySet": "FinteoFaturalarTAll",
+    "name": "Finteo Faturaları Tablosu",
+    "transportObject": "ZFINTEOFATURALARTABLT",
+    "configurationGroup": "",
+    "skipRootEntity": true
+  },
+  "appConfiguration": {
+    "listReport": {},
+    "objectPages": [
+      {
+        "entitySet": "FinteoFaturalarTAll",
+        "variantManagement": "control"
+      }
+    ],
+    "tableSettings": [
+      {
+        "entitySet": "FinteoFaturalarTabl",
+        "selectAll": true,
+        "rowCountMode": "auto",
+        "frozenColumnCount": 2,
+        "threshold": 20
+      }
+    ]
+  }
+}

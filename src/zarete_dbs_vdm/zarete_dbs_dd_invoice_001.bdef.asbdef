@@ -1,0 +1,19 @@
+unmanaged implementation in class zbp_arete_dbs_dd_invoice_001 unique;
+strict ( 2 );
+
+define behavior for ZARETE_DBS_DD_INVOICE_001 //alias <alias_name>
+//late numbering
+lock master
+authorization master ( global )
+//etag master <field_name>
+{
+
+  update;
+
+  action clearing_all parameter ZARETE_DBS_DD_T020 result [0..1] ZARETE_DBS_DD_T020;
+
+  action send_invoice parameter ZARETE_DBS_DD_T029 result [0..1] ZARETE_DBS_DD_T029;
+  action delete_invoice parameter ZARETE_DBS_DD_T029 result [0..1] ZARETE_DBS_DD_T029;
+  action accounting_document parameter ZARETE_DBS_DD_T029 result [0..1] ZARETE_DBS_DD_T029;
+
+}

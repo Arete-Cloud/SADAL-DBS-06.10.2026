@@ -1,0 +1,90 @@
+@Metadata.layer: #CORE
+@UI: {
+  headerInfo: {
+    typeName: 'A_StatülerinAksiyonları',
+    typeNamePlural: 'A_StatülerinAksiyonları'
+  }
+}
+annotate entity ZARETE_DBS_PV_T003 with
+{
+
+  @UI.facet: [
+         { id: 'id001' ,
+                 purpose: #HEADER,
+                 label: 'STATULERIN AKSIYONLARI' ,
+                 type: #FIELDGROUP_REFERENCE,
+                 targetQualifier: 'hdRelation'} ,
+        { id:'id002' ,
+                     type: #COLLECTION ,
+                     label: 'STATU-AKSIYON ESLESTIRME' ,
+                     position: 10 } ,
+
+                      { type: #IDENTIFICATION_REFERENCE ,
+                     label : 'STATU-AKSIYON TANIMLAMALARI',
+                     parentId: 'id002',
+                     id: 'id003' ,
+                     position: 10 }
+                                   ]
+                                   
+                                     
+    @UI.fieldGroup: [{ qualifier: 'STATU-AKSIYON TANIMLAMALARI' , position: 10 }]
+  @UI.lineItem: [ {
+   position: 10 ,
+   importance: #MEDIUM,
+   label: 'Sap Statü Kodu'
+  } ]
+  @UI.identification: [ {
+  position: 10 ,
+  label: 'Sap Statü Kodu'
+  } ]
+  @EndUserText.label: 'Sap Statü Kodu'
+  @Consumption.valueHelpDefinition: [{entity: {name: 'ZARETE_DBS_DD_T010', element: 'SapStatusCode' },
+                                                                  additionalBinding  : [{ localElement   : 'SapStatusDefinition',
+                                                                      element        : 'SapStatusDefinition'
+                                                                    }]}]
+  SapStatusCode;
+  
+  @UI.fieldGroup: [{ qualifier: 'STATU-AKSIYON TANIMLAMALARI' , position: 10 }]
+  @UI.lineItem: [ {
+   position: 20 ,
+   importance: #MEDIUM,
+   label: 'Sap Statü Tanımı'
+  } ]
+  @UI.identification: [ {
+  position: 20 ,
+  label: 'Sap Statü Tanımı'
+  } ]
+  @EndUserText.label: 'Sap Statü Tanımı'
+
+  SapStatusDefinition;
+
+  @UI.fieldGroup: [{ qualifier: 'STATU-AKSIYON TANIMLAMALARI' , position: 10 }]
+  @UI.lineItem: [ {
+   position: 30 ,
+   importance: #MEDIUM,
+   label: 'Aksiyon Kodu'
+  } ]
+  @UI.identification: [ {
+  position: 30 ,
+  label: 'Aksiyon Kodu'
+  } ]
+  @EndUserText.label: 'Aksiyon Kodu'
+  @Consumption.valueHelpDefinition: [{entity: {name: 'ZARETE_DBS_DD_T004', element: 'ActionCode' },
+                                                                  additionalBinding  : [{ localElement   : 'ActionDefinition',
+                                                                      element        : 'ActionDefinition'
+                                                                    }]}]
+  ActionCode;
+  @UI.fieldGroup: [{ qualifier: 'STATU-AKSIYON TANIMLAMALARI' , position: 10 }]
+  @UI.lineItem: [ {
+   position: 40 ,
+   importance: #MEDIUM,
+   label: 'Aksiyon Tanımı'
+  } ]
+  @UI.identification: [ {
+  position: 40 ,
+  label: 'Aksiyon Tanımı'
+  } ]
+  @EndUserText.label: 'Aksiyon Tanımı'
+  ActionDefinition;
+
+}

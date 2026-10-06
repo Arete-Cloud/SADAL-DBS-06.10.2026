@@ -1,0 +1,54 @@
+@Metadata.layer: #CORE
+@UI: {
+  headerInfo: {
+    typeName: 'A_SapStatus',
+    typeNamePlural: 'A_SapStatus'
+  }
+}
+
+annotate entity ZARETE_DBS_PV_T010 with
+{
+  @UI.facet: [
+   { id: 'idheader' ,
+             purpose: #HEADER,
+             label: 'SAP Status Değerleri' ,
+             type: #FIELDGROUP_REFERENCE,
+             targetQualifier: 'hdFi',
+             position: 10 } ,
+     { id:'idFi' ,
+                  type: #COLLECTION ,
+                  label: 'SAP Status Değerleri' ,
+                  position: 10 } ,
+
+                   { type: #IDENTIFICATION_REFERENCE ,
+                  label : 'SAP Status',
+                  parentId: 'idFi',
+                  id: 'idSAPVeri' ,
+                  position: 10 }
+                                ]
+
+  @UI.fieldGroup: [{ qualifier: 'SAP Status Değerleri' , position: 10 }]
+  @UI.lineItem: [ {
+  position: 10 ,
+  importance: #MEDIUM,
+  label: 'SAP Status'
+   } ]
+  @UI.identification: [ {
+  position: 10 ,
+  label: 'SAP Status'
+  } ]
+  @EndUserText.label: 'SAP Status'
+  SapStatusCode;
+  @UI.fieldGroup: [{ qualifier: 'SAP Status Değerleri' , position: 10 }]
+  @UI.lineItem: [ {
+  position: 20 ,
+  importance: #MEDIUM,
+  label: 'SAP Status Definition'
+   } ]
+  @UI.identification: [ {
+  position: 20 ,
+  label: 'SAP Status Definition'
+  } ]
+  @EndUserText.label: 'SAP Status Definition'
+  SapStatusDefinition;
+}

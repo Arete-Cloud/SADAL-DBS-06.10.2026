@@ -1,0 +1,9 @@
+CLASS zbp_arete_dbs_dd_t028 DEFINITION PUBLIC ABSTRACT FINAL FOR BEHAVIOR OF zarete_dbs_dd_t028.
+protected section.
+private section.
+ENDCLASS.
+
+
+
+CLASS ZBP_ARETE_DBS_DD_T028 IMPLEMENTATION.
+ENDCLASS.

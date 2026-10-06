@@ -1,0 +1,22 @@
+{
+  "formatVersion": "1",
+  "header": {
+    "description": "DBS Denkleştirme Catalog Entry",
+    "originalLanguage": "tr",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "className": "ZARETE_DBS_CL_DENKLESTIRME_JOB"
+  },
+  "parameters": [
+    {
+      "name": "P_BELNR"
+    },
+    {
+      "name": "P_GJAHR"
+    },
+    {
+      "name": "P_BUKRS"
+    }
+  ]
+}

@@ -1,0 +1,129 @@
+@Metadata.layer: #CORE
+@UI: {
+  headerInfo: {
+    typeName: 'A_Finteo-Sap Statu Eslestirme',
+    typeNamePlural: 'A_Finteo-Sap Statu Eslestirme'
+  }
+}
+annotate entity ZARETE_DBS_PV_T002 with
+{
+  @UI.facet: [
+       { id: 'id001' ,
+               purpose: #HEADER,
+               label: 'FINTEO-SAP STATU ESLESTIRME' ,
+               type: #FIELDGROUP_REFERENCE,
+               targetQualifier: 'hdRelation'} ,
+      { id:'id002' ,
+                   type: #COLLECTION ,
+                   label: 'STATU TANIMLAMALARI' ,
+                   position: 10 } ,
+
+                    { type: #IDENTIFICATION_REFERENCE ,
+                   label : 'STATULER',
+                   parentId: 'id002',
+                   id: 'id003' ,
+                   position: 10 }
+                                 ]
+
+  @UI.fieldGroup: [{ qualifier: 'STATULER' , position: 10 }]
+  @UI.lineItem: [ {
+   position: 10 ,
+   importance: #MEDIUM,
+   label: 'Finteo Statü Kodu'
+  } ]
+  @UI.identification: [ {
+  position: 10 ,
+  label: 'Finteo Statü Kodu'
+  } ]
+  @EndUserText.label: 'Finteo Statü Kodu'
+  @Consumption.valueHelpDefinition: [{entity: {name: 'ZARETE_DBS_DD_T011', element: 'FinteoStatusCode' },
+                                                                 additionalBinding  : [{ localElement   : 'FinteoStatusCodeText',
+                                                                     element        : 'FinteoStatusCodeText' }]}]
+  FinteoStatusCode;
+
+  @UI.fieldGroup: [{ qualifier: 'STATULER' , position: 10 }]
+  @UI.lineItem: [ {
+   position: 20 ,
+   importance: #MEDIUM,
+   label: 'Finteo Statü Kodu Açıklaması'
+  } ]
+  @UI.identification: [ {
+  position: 20 ,
+  label: 'Finteo Statü Kodu Açıklaması'
+  } ]
+  @EndUserText.label: 'Finteo Statü Kodu Açıklaması'
+  FinteoStatusCodeText;
+
+  @UI.fieldGroup: [{ qualifier: 'STATULER' , position: 10 }]
+  @UI.lineItem: [ {
+   position: 30 ,
+   importance: #MEDIUM,
+   label: 'Finteo Statü Detayı'
+  } ]
+  @UI.identification: [ {
+  position: 30 ,
+  label: 'Finteo Statü Detayı'
+  } ]
+  @EndUserText.label: 'Finteo Statü Detayı'
+  @Consumption.valueHelpDefinition: [{entity: {name: 'ZARETE_DBS_DD_T011', element: 'FinteoStatusDescription' },
+                                                               additionalBinding  : [{ localElement   : 'FinteoStatusDescText',
+                                                                   element        : 'FinteoStatusDescText'}]}]
+  FinteoStatusDescription;
+
+  @UI.fieldGroup: [{ qualifier: 'STATULER' , position: 10 }]
+  @UI.lineItem: [ {
+   position: 40 ,
+   importance: #MEDIUM,
+   label: 'Finteo Statü Detayı Açıklaması'
+  } ]
+  @UI.identification: [ {
+  position: 40 ,
+  label: 'Finteo Statü Detayı Açıklaması'
+  } ]
+  @EndUserText.label: 'Finteo Statü Detayı Açıklaması'
+  FinteoStatusDescText;
+
+  @UI.fieldGroup: [{ qualifier: 'STATULER' , position: 10 }]
+  @UI.lineItem: [ {
+   position: 40 ,
+   importance: #MEDIUM,
+   label: 'SAP Statü Kodu'
+  } ]
+  @UI.identification: [ {
+  position: 40 ,
+  label: 'SAP Statü Kodu'
+  } ]
+  @EndUserText.label: 'SAP Statü Kodu'
+  @Consumption.valueHelpDefinition: [{entity: {name: 'ZARETE_DBS_DD_T010', element: 'SapStatusCode' },
+                                                                  additionalBinding  : [{ localElement   : 'SapStatusCodeText',
+                                                                      element        : 'SapStatusDefinition'}]}]
+
+  SapStatusCode;
+
+  @UI.fieldGroup: [{ qualifier: 'STATULER' , position: 10 }]
+  @UI.lineItem: [ {
+   position: 50 ,
+   importance: #MEDIUM,
+   label: 'SAP Statü Açıklaması'
+  } ]
+  @UI.identification: [ {
+  position: 50 ,
+  label: 'SAP Statü Açıklaması'
+  } ]
+  @EndUserText.label: 'SAP Statü Açıklaması'
+  SapStatusCodeText;
+
+  @UI.fieldGroup: [{ qualifier: 'STATULER' , position: 10 }]
+  @UI.lineItem: [ {
+   position: 60 ,
+   importance: #MEDIUM,
+   label: 'Statu Icon'
+  } ]
+  @UI.identification: [ {
+  position: 60 ,
+  label: 'Statu Icon'
+  } ]
+  @EndUserText.label: 'Statu Icon'
+  StatusIcon;
+
+}
